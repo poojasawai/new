@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body id="mybody">
+    <ul id="myul">
+        <li>Javascript</li>
+        <li id="h">Html</li>
+        <li id="myli">CSS</li>
+        <li>Node</li>
+    </ul>
+    <script>
+        var u = document.getElementById("myul");
+        console.log(u);
+        var u1 = u.cloneNode(true); // true used to element copy as well as children 
+        console.log(u1);
+        var body = document.getElementById("mybody");
+        var copy = body.appendChild(u1);
+        console.log(copy);
+    </script>
+</body>
+
+</html>

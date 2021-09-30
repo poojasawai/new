@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                     document.write("<h3>"+"for"+"</h3>");
+
+                    var a=["pooja","ram",20,"jay"];
+                   // var a= new Array["pooja","ram",20,"jay"];
+
+                    for(let i=0;i<=3;i++)
+                    {
+                              document.write(a[i]+"<br>");
+                    }
+                    document.write("<hr/>");
+                    // in case you dont know array lenth use array length property
+                    document.write("<h3>"+"for and length property"+"</h3>");
+                    // only index traverse
+                    for(let i=0;i<a.length;i++)
+                    {
+                              document.write(a[i]+"<br>");
+                    }
+                    document.write("<hr/>");
+                    document.write("<h3>"+"for each and length property"+"</h3>");
+                   // index and value :traverse
+                    var a=["pooja","ram",20,"jay"];
+                    a.forEach(function(value,index){
+                              document.write(value+" "+index+"<br>");
+                    });
+                    document.write("<hr/>");
+                   
+                    document.write("<h3>"+"for of and length property"+"</h3>");
+                    //trverse only value
+                    var a=["pooja","ram",20,"jay"];
+                    for(let value of a ){
+                              document.write(value+"<br>");
+                    }
+
+                    document.write("<hr/>");
+
+                  /*  document.write("<h3>"+"Defing array"+"</h3>");
+                    
+                  var elements=prompt("Enter the number of elements:");
+                    var a=[];
+                   // document.write("<h3>"+"input for array"+"</h3>");
+
+                    for(var i=0;i<=elements;i++){
+                              a[i]=prompt("Enter Name:");
+                    }
+                    for(var value of a){
+                              document.write(value+"<br>");
+                    }*/
+
+
+
+
+                 //   document.write("<hr/>"); 
+                    //using constrcture
+                    //defining array
+                   /* var a=new Array(3); //length of array 3
+
+                    //Array length
+                   // var ln=a.length;
+
+                    // input
+                    for(i=0;i<=ln;i++){
+                              a[i]=prompt("enter number:");
+                    }
+                    // display values 
+
+                    for(var value of a){
+                              document.write(value+"<br>");
+                    }*/
+
+
+
+
+
+
+                    
+
+
+                     
+
+          </script>
+
+</body>
+</html>

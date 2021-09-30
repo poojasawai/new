@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+          document.write("<h3>"+"Array methods"+"</h3>");
+           var week=["sunday","monday","tuesday","wednesday","thrusday","friday","saturday"];
+           for(i=0;i<week.length;i++){
+                     document.write(i+" "+week[i]+"<br>");
+           }
+          
+          document.write("<h3>"+" reverse  Array "+"</h3>");
+           document.write(week.reverse())
+           document.write("<br>");
+           
+           document.write("<h3>"+"Array pop:)"+"</h3>");
+
+           document.write(week.pop()+" removed form an array");
+           document.write("<br>");
+           document.write("<h3>"+"Array push:)"+"</h3>");
+
+           document.write(week.push(3,"hii")+" element added an array");
+           document.write("<br>"+week);
+           document.write("<br>");
+           document.write("<h3>"+"Array shift:)"+"</h3>");
+
+           document.write(week.shift()+"removed first element");
+           document.write("<br>"+week);
+
+               document.write("<br>");
+              
+            document.write("<h3>"+"Array unshift:)"+"</h3>");
+
+           document.write(week.unshift("hii")+"add first element");
+           document.write("<br>"+week);
+
+           document.write("<br>");
+           document.write("<h3>"+"Array after all opration:)"+"</h3>");
+
+           for(var i=0;i<=week.length;i++){
+                     document.write(i+" "+week[i]+"<br>");
+           }
+
+
+
+
+
+
+
+
+
+
+          </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mydiv">
+        <h1 id="myh1">
+            Hello H1
+            <!-- this is comment -->
+            <em>pune</em>
+        </h1>
+        <p class="para">First para</p>
+        <p class="para">Second para</p>
+        <p id="mypara">Last para</p>
+    </div>
+    <script>
+        document.write("<h3>QuerySelector by Element</h3>");
+        //var result = document.querySelector("p"); // select first occuernces
+        var result = document.querySelector("p,h1,div") // div is first occurence
+        document.write(result);
+        console.log(result);
+        document.write("<br>");
+        document.write("<h3>QuerySelector by id </h3>");
+
+        var result1 = document.querySelector("#myh1");
+        // var result1 = document.querySelector("#myh1,#mydiv");
+        document.write(result1);
+        console.log(result1);
+        document.write("<br>");
+        document.write("<h3>QuerySelector by class </h3>");
+        var result3 = document.querySelector(".para");
+        // var result3 = document.querySelector(".para,.mypara");
+        document.write(result3);
+        console.log(result3);
+        document.write("<h3>QuerySelectorAll id  using loop </h3>");
+        var res = document.querySelectorAll(".para");
+        var len = res.length;
+        console.log(len);
+        for (let i = 0; i < len; i++) {
+            console.log(res[i]);
+        }
+        document.write("<h3>QuerySelectorALL by element </h3>");
+        var result = document.querySelectorAll("p"); // select first occuernces
+        //var result = document.querySelectorAll("p,h1,div") // div is first occurence
+        document.write(result);
+        console.log(result);
+
+        document.write("<h3>QuerySelectorALL by Id </h3>");
+        // var result1 = document.querySelectorAll("#myh1");
+        var result1 = document.querySelectorAll("#myh1,#mydiv");
+        document.write(result1);
+        console.log(result1);
+        document.write("<h3>QuerySelectorALL by Class</h3>");
+        // var result3 = document.querySelectorAll(".para");
+        var result3 = document.querySelectorAll(".para,.mypara");
+        document.write(result3);
+        console.log(result3);
+        document.write("<h3>parentNode:</h3>");
+        var pnode = document.getElementById("myh1");
+        console.log(pnode.parentNode);
+        console.log(pnode.parentElement);
+        var pnode1 = document.getElementById("mydiv");
+        console.log(pnode1.parentNode);
+        console.log(pnode1.parentElement);
+        document.write("<h3>ChildNode:</h3>");
+        var cnode = document.getElementById("myh1");
+        console.log(cnode.childNodes);
+        console.log(cnode.children);
+
+        document.write("<h3>ChildNode using loop:</h3>");
+        var result = document.getElementById("myh1");
+        var len = result.childNodes.length;
+        console.log(len);
+        var len1 = result.children.length;
+        console.log(len1);
+        for (let i = 0; i < len; i++) {
+            console.log(result.childNodes[i]);
+        }
+        // for children
+        for (let i = 0; i < len1; i++) {
+            console.log(result.children[i]);
+        }
+    </script>
+
+</body>
+
+</html>

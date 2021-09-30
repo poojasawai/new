@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myp" style="background-color: darkgray; color: black;">paragraph</p>
+    <script>
+        var p = document.getElementById("myp");
+        var cs = p.style;
+        console.log(cs);
+        // cssText return or text css 
+        // returns 
+        console.log(css.cssText);
+        console.log(p);
+        //sets 
+        cs.cssText = "color:blue;border:1px solid blue";
+        console.log(p);
+    </script>
+    <script>
+        var p1 = document.getElementById("myp");
+        var cs = p1.style;
+        // it gets the num of explicity set styles on the html ele
+        console.log(cs.length);
+
+        console.log(p);
+        var cs = p1.style;
+        console.log(cs.item(1));
+        // console.log(cs[0]);
+        // it returns a domstring containing the value of a specified css property.
+        var propvalue = cs.getPropertyValue('color'); // op=black
+        console.log(propvalue);
+        // remove property 
+        cs.removeProperty('color');
+        console.log(p); // op = color: black is remove . form css declaration 
+
+        // set property 
+        style.setProperty(PropertyName, value, priority);
+        cs.setProperty('font-size', '90px');
+        console.log(p);
+    </script>
+
+    <body>
+        <p id="myp" style="background-color: darkgray; color: black !important; color: brown;">paragraph</p>
+        <script>
+            var p1 = document.getElementById("myp");
+            var cs = p1.style;
+            console.log(cs)
+            var property = cs.getPropertyPriority('color');
+            console.log(property);
+            console.log(p);
+        </script>
+    </body>
+</body>
+
+</html>

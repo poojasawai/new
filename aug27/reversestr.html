@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h3> Reverse +ve string useing event</h3>
+          <script>
+                    function str(){
+                              var str1=("javascript");
+                              var str2="";
+                              for(var i=str1.length-1;i>=0;i--){
+                                        str2+=str1[i];
+                              }
+                            //  alert(str2);
+                              document.write(str2);
+                    }
+
+          </script>
+                              <button onclick="str()">Click</button>
+           <hr width="100%">
+           <h3> sort string use addEventListener</h3>
+            <button id="btn">Sort array</button>
+           <script>
+              function array(){
+                        var arr=["Red","Yellow","Orange","Blue"];
+                        var temp=0;
+                        document.write(arr+"<br>");
+                        for(var i=0;i<arr.length;i++)
+                        {
+                              for(var j=i+1;j<arr.length;j++)
+                              {
+                                        if(arr[i]>arr[j])
+                                        {
+                                                  temp=arr[i];
+                                                  arr[i]=arr[j];
+                                                  arr[j]=temp;
+                                        }
+                              }
+                        }
+                    
+                        for(var i=0;i<arr.length;i++)
+                        {
+                                  document.write(arr[i]+" ");
+                        }
+              } 
+              var btn=document.getElementById("btn");
+              btn.addEventListener("click",array,true)
+           </script>
+                      <hr width="100%">
+                    <script>
+                              var str="blue";
+                               var temp=0;
+                               document.write(("sort string:")+str+"<br>");
+                               for(var i=0;i<str.length-1;i++)
+                               {
+                                        for( var j=0;j<str.length-1;j++)
+{
+                                                   if(str[i]>str[j])
+                                                   {
+                                                             temp=str[i];
+                                                             str[i]=str[j];
+                                                             str[j]=temp;
+                                                   }
+                                         }
+                               }
+                               for(var i=0;i<str.length;i++)
+                               document.write(str[i]);
+                    </script>
+
+</body>
+</html>

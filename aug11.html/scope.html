@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+          <head>
+                    <meta charset="utf-8">
+                    <title></title>
+          </head>
+          <body>
+                    
+                    <script> 
+                    //accessible from anywhere
+                    var i="I am global variable";
+                    function show(){
+                              //remove var form j it become global variable
+                              j="I am local variable";//global variable
+                        //var j
+                              document.write(i+"<br>");//i accessible inside
+                              document.write(j+"<br>"); //j accessiblen inside
+                    }
+                    show();
+                    document.write(i+"<br>");  //i accessible in outside
+                    document.write(j+"<br>");  //j accessible in outside
+
+                    function disp(){
+                             // document.write(i+"<br>");//i accessible in
+                              document.write(j+"<br>"); //
+                    }
+                    disp();
+
+                    if(true){
+                             // document.write(i+"<br>");
+                              document.write(j+"<br>");
+
+                    }
+                    </script>
+          </body>
+</html>

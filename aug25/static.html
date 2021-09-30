@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>static keyword</title>
+</head>
+<body>
+          <script>
+                    //method overriding
+                    //same function name with diff implemention.
+                    //static method=>used to define a static 
+                    //accessing property used instance .
+                    //create instace of then new memory.memory is the diff.
+                    //prototype share memory all instances 
+                    //constructor create memory.
+                    document.write("<h3>"+"Static method constructor"+"</h3>");
+
+                    class Father
+                    {
+                              show()
+                              {
+                                        return "super class<br>";
+                              }
+                    }
+                    class Son extends Father
+                    {
+                              show()
+                              {
+                                        return "sub class";
+                              }
+                    }
+                    var s=new Son();
+                    document.write(s.show()+"<br>");
+
+                    var f=new Father();
+                    document.write(f.show());
+                    
+          </script>
+          <hr width="100%">
+          <script>
+         document.write("<h3>"+"Static method"+"</h3>");
+
+              class mobile
+              {
+                        static disp()
+                        {
+                                  return "static method";
+                        }
+
+              }
+              document.write(mobile.disp());
+
+
+          </script>
+                    <hr width="100%">
+                    <script>
+                    document.write("<h3>"+"prototype"+"</h3>");
+                    var Mobile=function(model_no)
+                    {
+                              this.model=model_no;
+                              this.price=3000;
+                    };
+                    var samsung=new Mobile('galaxy');
+                    var nokia=new Mobile('3310');
+                   // classname.prototype.key='value';
+                    //prototype member
+                    Mobile.prototype.color='white';
+                   // samsung.color='white';
+                   // nokia.color='white';
+                  //  document.write(samsung.color);
+                   // samsung.ram=254;
+                    console.log(samsung);
+                   console.log(nokia);
+                 //  document.write(Object.keys(samsung));
+
+
+
+
+                    </script>
+                                        <hr width="100%">
+           <script>
+                     //it will return object.prototype.
+               console.log(Object.prototype);
+           // creating empty obj and protytype obj of this 
+           //object is object.prototype
+               var b={};
+               //we are checking what is the prototype  obj of b with 
+               //should be obj.prototype
+               //b wiil inherit all properties of obj .prototype obj
+               console.log(Object.getPrototypeOf(b));
+
+               // further check what is the prototype obj of 
+
+              // console.log(Object.getPrototypeOf(Object.prototype));
+              // check the above stuff with 
+              var b1=new Object();
+              //console.log(Object.getPrototypeOf(b1));
+
+              //checking array
+              // first check that is array.prototype
+            //  console.log(Array.prototype);
+            //creating empty array
+            var b2=new Array();
+            //check whta is the prototype of obj b2
+            //it is arrry.prototype
+            console.log(Object.getPrototypeOf(b2));
+
+            //now check what is the prototype obj of array.prototype
+            console.log(Object.getPrototypeOf(Array.prototype));
+            </script>                       
+                  <hr width="100%">
+                  <script>
+                            function mobile1(){
+                                      //mobile is  obj created by function which is actually function itself.
+                                      console.log(mobile1);
+                                      //prototype is proprty of mobile which point to the prototype obj of monblie
+                                      console.log(mobile1.prototype);
+
+                                      // creating a new  onj wsing new keyword
+                                      var lg=new mobile1();
+                                      //when we create a new obj of that fiunction using new keyword js engin create an obj and sets a property name __proto__which points to its funtion property obj
+                                      console.log(lg.__proto__);//mobile.prototype
+                                      //varifying all 
+                                      console.log(lg.__proto__===mobile1.prototype);
+          
+                            }
+                  </script>
+
+
+
+</body>
+</html>

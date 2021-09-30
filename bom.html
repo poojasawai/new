@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- window obj =     -->
+    <h1>Outer and Inner</h1>
+    <script>
+        let a = 5;
+        // outer height
+        var oh;
+        oh = window.outerHeight;
+        console.log("outer hight=" + oh);
+        // outer width
+        var ow;
+        ow = window.outerWidth;
+        console.log("outer width=" + ow);
+        //inner hight
+        var ih;
+        ih = window.innerHeight;
+        console.log("inner hight=" + ih);
+        //  inner width
+        var iw;
+        iw = window.innerWidth;
+        console.log("inner width=" + iw);
+    </script>
+    <h1>dialog box</h1>
+    <script>
+        var a = 20;
+        window.alert("I am alert");
+        alert("hello alert");
+        alert(a);
+        alert(5 + 3);
+        alert("price=" + a);
+    </script>
+</body>
+
+</html>

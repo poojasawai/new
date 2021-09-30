@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <form onsubmit="return validation()">
+          User Name:<input type="text" name="fname" id="uname" value=""><br><br>
+          <span id="errorname" style="color: red;"></span>
+          Password:<input type="text" name="" id="password" ><br><br>
+          <p id="errorpassword" style="color: red;"></p>
+         Confirm Password:<input type="text" name="" id="cpassword" ><br><br>
+         <p id="errorcpassword" style="color: red;"></p>
+         Email:<input type="email" name="" id="email"><br><br>
+         <p id="erroremail" style="color: red;"></p>
+         Mobile no:<input type="text" name="" id="mobile"><br><br>
+         <p id="errormobile" style="color: red;"></p>
+         <input type="submit" name="Submit">
+ </form>
+ <script>
+           function validation()
+           {
+                     var Username=document.getElementById("uname").value;
+                     var password1=document.getElementById("password").value;
+                     var password2=document.getElementById("cpassword").value;
+                     var email1=document.getElementById("email").value;
+                     var mobile1=document.getElementById("mobile").value;
+
+                     var usercheck=/^[a-zA-Z@ #. ]{3,30}$/;
+                     var passwordcheck=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                     var emailcheck=/^[A-Za-z_.]{6,}@[A-Za-z]{5,}[.]{1}[A-Za-z.]{2,}$/;
+                     var mobilecheck=/^[6789]{1}[0-9]{9}$/;
+
+                     if(usercheck.test(Username))
+                     {
+                               document.getElementById('errorname').innerHTML=" ";
+                     }else
+                     {
+                               document.getElementById('errorname').innerHTML="**Invalid user name**";
+                               return false;
+                             }
+                            
+                             if(passwordcheck.test(password1))
+                     {
+                               document.getElementById('errorpassword').innerHTML=" ";
+                     }else
+                     {
+                               document.getElementById('errorpassword').innerHTML="**Invalid password**";
+                               return false;
+                             }
+                             if(password2.match(password1))
+                             {
+                                       document.getElementById('errorcpassword').innerHTML=" ";
+                             }else
+                             {
+                              document.getElementById('errorcpassword').innerHTML="**password does not match**";
+                              return false;
+  
+                             }
+
+                             if(emailcheck.test(email1))
+                     {
+                               document.getElementById('erroremail').innerHTML=" ";
+                     }else
+                     {
+                               document.getElementById('erroremail').innerHTML="**Invalid email**";
+                               return false;
+                             }
+
+                           
+                             if(mobilecheck.test(mobile1))
+                     {
+                               document.getElementById('errormobile').innerHTML=" ";
+                     }else
+                     {
+                               document.getElementById('errormobile').innerHTML="**Invalid mobile No**";
+                               return false;
+                             }
+
+           
+
+           }
+ </script>
+                    
+</body>
+</html>

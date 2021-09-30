@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="./task.css">
+</head>
+<body>
+  <fieldset>
+    <legend>Calculate:</legend>
+    First Name:<input type="text" name="abc" value="" autofocus><br><br>
+    Second Name:<input type="text" name="abc" value="">
+    <center><button onclick="move()"> Calculate </button></center>
+    <h3>TOtal Calculation:</h3>
+    <!-- <progress></progress> -->
+  
+    <div id="myprogress">
+      <div id="mybar">
+				<span id="value">1%</span>
+			</div>
+     
+    </div>
+  </fieldset>
+  <script>
+    const move = () => {
+      var elem = document.getElementById("mybar");
+      var width = 1;
+      var id = setInterval(frame, 10)
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+
+        } else {
+          width++;
+          elem.style.width = width + "%";
+          document.getElementById("value").innerHTML = width + "%";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

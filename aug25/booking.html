@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+ <fieldset>
+    <legend>Booking Details:</legend>
+    <label>Movie:</label>
+    <select name="Movie">
+      <option value="">movie1</option>
+      <option value="">movie2</option>
+      <option value="">movie3</option>
+      <option value="">movie4</option>
+
+</select>
+<br><br>
+<label> Theaters:</label>
+    <select name="theaters">
+      <option value="">theaters1</option>
+      <option value="">theaters2</option>
+      <option value="">theaters3</option>
+      <option value="">theaters4</option>
+
+</select>
+<br><br>
+
+<label> Date:</label>
+<input type="date" name="">
+<br><br>
+
+<label> Email:</label>
+<input type="email" name="" placeholder="poojasawai@gmail.com">
+<br><br>
+<label>Tickets:</label>
+<input  type="text" id="ticket" name="" value=""><br><br>
+<label>Total price:</label>
+<label id="tprice"></label><br><br>
+<button onclick="cal()">Book Tickets</button>
+</fieldset>
+<br><br>
+<label> Per ticket Price:RS 100.00</label><br><br>
+<label > Discounts:</label>
+<ul><li><p>10% Discounts if number of booked shows >=10</p></li>
+</ul>
+     <script>
+
+            function cal(){
+                var tprice=document.getElementById("tprice").value; //number is 
+                var t=document.getElementById("ticket").value;
+               // document.write(t);
+                var sum=t*100;
+                document.getElementById("tprice").innerHTML=sum;
+                
+               /* var t=document.getElementById("ticket").value;
+                  document.getElementById("tprice").innerHTML=t*100;*/
+
+            }
+
+
+           
+
+
+     </script>
+  
+</body>
+</html>

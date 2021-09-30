@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myid">
+        <h1> We are learning javascript</h1>
+        <h1>I am h1</h1>
+    </div>
+    <script>
+        // targeting ele whrere we will append new nodes
+        var targetNode = document.getElementById("myid");
+        // creating empty doc fragment
+        var df = document.createDocumentFragment();
+        // creating new ele h3
+        var hnode = document.createElement("h3");
+        // careating p
+        var pnode = document.createElement("p");
+
+        // text for new h3 and p ele
+        hnode.textContent = "H3 form javascript";
+        pnode.textContent = "p form javascript";
+        // appending node to document fargment df
+        df.appendChild(hnode);
+        df.appendChild(pnode);
+
+        //after appending df has now two elements and text node something like below
+        /* # document -fragemnt
+                 <h3>"H3 form javascript"<h3>
+                 <p>"p form javascript"<p>*/
+        targetNode.appendChild(df);
+        console.log(targetNode);
+        // df is ampty 
+        console.log(df);
+    </script>
+</body>
+
+</html>

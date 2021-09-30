@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="d">
+        <ul id="myul">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+        </ul>
+
+    </div>
+    <p id="para">paragraph</p>
+    <div id="div1"></div>
+    <div id="div2">
+        <p>Hello</p>
+        <p>world</p>
+
+    </div>
+    <script>
+        // inner html=>is used to pure text 
+        // outer html=select parent as well as.set with parent.
+        // when we create empty then empty parent also.
+        var u = document.getElementById("myul");
+        console.log(u); // show ul w ith li
+        console.log(u.innerHTML); // li and item 
+        // u.innerHTML = " "; // get replce string 
+        //console.log(u.innerHTML); // is emty nothing show
+        // console.log(u); // ul is  still there it just set inner htmlempty
+        u.innerHTML = "<li>HTML</li><li>JAVA</li>CSS<li></li>" //set html
+            // console.log(u, innerHTML);
+        p1 = document.getElementById("para");
+        p1.textContent = "HELLO WOLRD"
+            // document.getElementById("div1").innerHTML = "Hello div";
+        var div1 = document.getElementById(d);
+        // console.log(div1.outerHTML);
+        // u.outerHTML = ""
+        //console.log(u);
+        // u.outerHTML=()
+
+        //  outer html
+        // console.log(u.outerHTML);
+        var div2 = document.getElementById('div2');
+        console.log(div2);
+        console.log(div2.outerText = "pune");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myid">
+        <h1>I am learning javascript</h1>
+        <h1>I am h1</h1>
+
+    </div>
+    <script>
+        // creating a new h2 element
+        var nnode = document.createElement("h2"); // h2 create a dynamacally using create element node
+
+        var targetnode = document.getElementById("myid");
+        //  console.log(targetnode);
+        // append new h2 to div
+        //  targetnode.appendChild(nnode);
+        //  console.log(targetnode);
+
+        var targetnode = document.getElementById("myid");
+        // creating and appending nwe eleemnt h2
+        targetnode.appendChild(document.createElement("h2"));
+        console.log(targetnode);
+    </script>
+    <hr width="100%">
+</body>
+<div id="myid1">
+    <h1>I am learning javascript</h1>
+    <h1>I am h1</h1>
+
+</div>
+
+<body>
+
+</body>
+<script>
+    // creating new text node
+    var nTnode = document.createTextNode("text created by javascript");
+    var targetnode1 = document.getElementById("myid1");
+    // append new text node to div
+    targetnode1.appendChild(nTnode);
+    console.log(targetnode1);
+</script>
+<hr width="100%">
+
+<body>
+    <div id="myid2">
+        <h1>I am learning javascript</h1>
+        <h1>I am h1</h1>
+
+    </div>
+    <script>
+        // creating new comment node
+        var nCNode = document.createComment("comment form javascript");
+        var targetNode = document.getElementById("myid2");
+        targetNode.appendChild(nCNode);
+        console.log(targetNode);
+    </script>
+    <hr width="100%">
+
+</body>
+
+<body>
+    <div id="myid2">
+        <h1>I am learning javascript</h1>
+        <h1>I am h1</h1>
+
+    </div>
+</body>
+<script>
+    // created element
+    var nnode = document.createElement("h2");
+    // crated text node
+    var nTnode = document.createTextNode("text created by javascript");
+    // created comment
+    var nCNode = document.createComment("comment form javascript");
+    //first we will append new text node to new element node h2
+    //nnode.appendChild(nTnode);
+    // dispaly whta nnode have
+    console.log(nnode);
+    // append new comment nodet new ele node h2
+    nnode.appendChild(nCNode);
+    console.log(nnode);
+    // targeting ele whrere we will append new nodes
+    var targetnode = document.getElementById("myid");
+    console.log(targetnode);
+    // now append new ele h2 to div
+    // targetnode.appendChild()
+</script>
+
+</html>

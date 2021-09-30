@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>myform</title>
+</head>
+
+<body id="myb">
+    <form id="myf">
+        <labe>First Name:</labe>
+        <input type="text" id="myname" placeholder="First Name" value=""><br><br>
+        <labe>Last Name:</labe>
+        <input type="text" id="lname" placeholder="Last Name" value=""><br><br>
+        <labe>Email:</labe>
+        <input type="email" id="myemail"><br><br>
+        <label>Phone no:</label>
+        <input type="text" id="phone"><br><br>
+        <button type="button" onclick="add()">ADD</button>
+        <button type="button" onclick="dele()">Delete</button>
+    </form>
+    <div id="myd">
+
+    </div>
+    <script>
+        function add() {
+            var input = document.getElementById("myname");
+            //console.log(input.value);
+            var lastname = document.getElementById("lname");
+            //console.log(lastname.value);
+            var email = document.getElementById("myemail");
+            //console.log(email.value);
+            var pno = document.getElementById("phone");
+            //console.log(pno.value);
+            var d = document.getElementById("myd");
+
+
+            // accessing name
+            var newele = document.createElement("p");
+            var input = document.createTextNode(input.value);
+            newele.appendChild(input);
+            d.appendChild(newele);
+            // lastname
+            var newele1 = document.createElement("p");
+            var lastname = document.createTextNode(lastname.value);
+            newele1.appendChild(lastname);
+            d.appendChild(newele1);
+
+            // email
+            var newele2 = document.createElement("p");
+            var email = document.createTextNode(email.value);
+            newele2.appendChild(email);
+            d.appendChild(newele2);
+
+
+            // phone no
+            var newele3 = document.createElement("p");
+            var phone = document.createTextNode(pno.value);
+            newele3.appendChild(phone);
+            d.appendChild(newele3);
+
+            /*  input.value = null;
+              lastname.value = null;
+              email.value = null;
+              pno.value = null;*/
+
+
+
+        }
+
+        function dele() {
+            var d = document.getElementById("myd");
+            d.removeChild(d.lastChild);
+            //d.remove // all record removes
+        }
+    </script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+     document.write("<h3>"+" Splice method "+"</h3>");
+     var arr=["rahul","sonam","pooja","raj","rohan"];
+     document.write(arr+"<br>");
+     //arr.splice(2,2);//remove all elements from index 2 (including index 2)
+    // document.write(arr+"<br>");// modifies original array
+   //slice method
+   document.write("<h3>"+" Slice method "+"</h3>");
+
+   //document.write(arr.slice(0,2)+"<br>");
+
+   // remove 1 elements from index 2
+  // arr.splice(2,1);//it will remove index 2 element
+  // document.write(arr+"<br>");
+
+   // remove 2 ele from index 2
+ //  arr.splice(2,2); // it wil remove index 2 and 3 ele
+  // document.write(arr+"<br>");
+
+   //remove 0elements form index 2qand insert "dell"
+  // arr.splice(2,0,"Dell"); // it not remove anything but wil insert dell at posinton 2
+  // document.write(arr+"<br>"); 
+    // remove 2 ele form index 2
+   arr.splice(2,1,"Dell","PHP");
+   document.write(arr+"<br>");
+
+   document.write("<hr/>");
+   document.write("<h3>"+" toString method "+"</h3>");
+
+   var arr=["rahul","sonam","pooja","raj","rohan"];
+   arr.toString();
+   document.write(arr);
+   document.write("<hr/>");
+   document.write("<h3>"+" fill() method "+"</h3>");
+   var arr=["rahul","sonam","pooja","raj","rohan"];
+   //arr.fill("Don");
+  // document.write(arr);
+  // document.write("<br>");
+
+   // fill don start with index 1to3 (3 not included)
+   //arr.fill("Don",1,3); 
+  // document.write(arr+"<br>");
+    // creating empty array length 3 and fill it with jay
+   var new_arr=new Array(3).fill("jay");
+   document.write(new_arr);
+
+
+
+
+
+
+ 
+          </script>
+</body>
+</html>

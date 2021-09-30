@@ -1,0 +1,104 @@
+<!-- iframe =  page with in page-->
+<!-- meta => -->
+<!-- alt in image tag -->
+
+<!-- span and div -->
+<!-- span= inline ele  div=block  -->
+<!-- self close tag -->
+<!-- semantic tag  =aside ,footer ,section ,figure-->
+<!-- rowsapn  coln-->
+<!-- class and id -->
+<!-- position -->
+<!-- display none  its not take any space.2) visiblity hidden -->
+<!-- css=> inline external inrtnal -->
+<!-- img map , canvas -->
+<!-- local storag session 
+the localstorage is a read only propertyof window object.
+the data will not be deleted when the browser is closed and reopend.not expire thus data
+synatx:window.localstorage
+methods=1)setItem(key ,value)=> it allows to aad a key/value pair to the storage object.
+if key already exists the name value will overwrite the old value
+ 2)getItem(key)=>it returns the value of the item that is set with the given key
+3)key(n)=>return the key only not return value.
+4)removeItem(key)=remove the item in the storage object with the given key.-->
+<script>
+    /*  window.localStorage.setItem('username','pooja');
+                  window.localStorage.setItem('email','pooja@gamil.com');
+                  console.log(localStorage.length);*/
+    // console.log(localStorage.getItem('email'));
+    //  console.log(localStorage.key(1)); //used to loop
+    //localStorage.removeItem('email');
+    //   localStorage.clear();
+    //   **sessionStorage*** = > session storage also read only proprty of window object
+    /*it store data in web browser specifically to the domain and protocol for particular session 
+    data storage in session storage gets cleared when the page session ends.
+    it does not get sent to the server
+    syntax:window.sessionStorage
+    1)setItem 2)getItem 3)key(n) 4)removeItem*/
+    sessionStorage.setItem('user', 'pooja');
+    sessionStorage.setItem('email', 'pooja123@gmail.com');
+    //console.log(sessionStorage.getItem('user'));
+    console.log(sessionStorage.key('0'));
+    sessionStorage.removeItem('email'); // remove data  and cler method clre all data.
+
+
+    //console.log(sessionStorage);
+</script>
+<!--**** js **** -->
+<!-- type js primmitve :num string object null undefind  -->
+<!-- hoising -->
+<!-- == and === -->
+<!-- nan -->
+<!-- pass by value pass by reference -->
+<!-- immeditly function = run soon an defind-->
+<!-- call applay bind -->
+<!-- scope -->
+<!-- closure -->
+<!-- callback, =>
+   memoization is a way to return the value same input comes 
+   run function again return the value form cath we get same input-->
+
+<!-- prototype -->
+<!-- **css** -->
+<!-- box model 
+-->
+<!-- border box property -->
+<!-- event bubbling -->
+<!-- string  method-->
+<!-- event delecation -->
+<!-- box sizing  inline , block level-->
+<!-- get and push => -->
+<!-- prototype -->
+<!-- call => the call() method is predefind javascript method.
+  obj can used a method belonging to another onject
+  one object call another object method.
+  call method takes argument separtly.
+  and apply =>is similar to call method 
+apply methods takes argument as in array. -->
+<!-- static fixposition absolute  -->
+<!-- css read right to left -->
+<!-- media tag -->
+<!-- html5 element
+1)footer ,figure,header,nav,section,video,mark,aside ,article -->
+<!-- null typeof is object -->
+<!-- type of function is function -->
+<!-- var typeof is object  -->
+<!-- history of js -->
+<!-- undeclare and undefind -->
+<!-- promat  box-->
+<!-- this -->
+
+
+
+<script>
+    /*
+                  function count(num)
+                  {
+                            document.write(num +" ");
+                            var newnum=num-1;
+                            if(newnum>0)
+                            {
+                                      count(newnum);
+                            }
+                  }count(5);*/
+</script>

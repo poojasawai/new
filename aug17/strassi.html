@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h3>Bitcode</h3>
+          <script>
+                    var str="Bitcode";
+                    var l=str.length;
+                   // document.write("length="+l+"<br>");
+                    for(i=0;i<=l;i++)
+                    {
+                              if(i%2==0)
+                              {
+                                        document.write(str.charAt(i).toUpperCase());
+                              }
+                              else
+                              {
+                                        document.write(str.charAt(i).toLowerCase());
+                              }
+                    }
+          </script>
+          <hr width="100%">
+          <script>
+              document.write("<h3>"+"JAvascript"+"</h3>");
+
+                     var str="jAvascript";
+                     count=0,count1=0;
+                  //  var l=str.length;
+                   // document.write(l+"<BR>");
+                     for( var i=0;i<str.length;i++)
+                     {
+                               if(str.charAt(i)=='a'){
+                                         count++;
+                               }
+                               else if(str.charAt(i)=='A')
+                               {
+                                         count1++;
+
+
+                               }
+                     }
+                     document.write(count+"<BR>");
+                     document.write(count1);
+          </script>
+                    <hr width="100%">
+                    <script>
+                document.write("<h3>"+"Sachin"+"</h3>");
+                var strr="sachin";
+                document.write(strr.slice(0,4));// slice method
+                document.write("<br>");
+              document.write(strr.substring(0,4));//substring
+              document.write("<br>");
+          document.write(strr.substr(0,4));//substr
+          document.write("<br>");
+
+          document.write("<h3>"+"parametrized function"+"</h3>");
+          //arrow function
+
+              var a=(n)=>{
+                        for(var i=0;i<n.length;i++)
+                        {
+                                  if(i>=0&&i<=3)
+                                  {
+                                            document.write(n.charAt(i));
+                                  }
+                        }
+              }
+               a("sachin");
+     </script>                  
+<hr width="100%"> 
+<script>
+ document.write("<h3>"+"star pattern"+"</h3>");
+          for( var i=1;i<=6;i++)
+          {
+               for(var j=1;j<=i;j++)
+               {
+                    document.write("&nbsp;");
+    
+               }
+               for(var k=0;k<=(6-1-i);k++)
+               {
+                    document.write("*");
+
+               }
+               document.write("<br> ");
+
+          }
+ 
+
+</script>
+
+
+
+
+
+          
+</body>
+</html>

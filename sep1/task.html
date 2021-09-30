@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>tree</title>
+
+</head>
+<body>
+          <h2>Logical tree</h2>
+
+          <p id="myp">I am para <!--  this is comment --></p>
+          <h1 class="myh1"> I am H1</h1>
+          <div id="mydiv">
+                    <span class="myspan">Hello</span>
+           </div>
+           <p class="mah1 para">I am para2</p>
+           <h2 class="myh1">I am h2</h2>
+          <script>
+           document.write("-------Element------<br>");
+           var elm=document.getElementById("myp");
+           document.write(elm.nodeName+"<br>");
+           document.write(elm.nodeValue+"<br>");
+           document.write(elm.nodeType+"<br>");
+           console.log(elm.nodeName);
+           console.log(elm.nodeValue);   
+           console.log(elm.nodeType);
+           document.write("-------text------<br>");
+           var txt=document.getElementById("myp");
+           document.write(txt.firstChild.nodeName+"<br>");
+           document.write(txt.firstChild.nodeValue+"<br>");
+           document.write(txt.firstChild.nodeType+"<br>");
+            console.log(txt.firstChild.nodeName);
+            console.log(txt.firstChild.nodeValue);
+            console.log(txt.firstChild.nodeType);
+            document.write("-------comment------<br>");
+            var cmt=document.getElementById("myp");
+            document.write(cmt.firstChild.nextSibling.nodeName+"<br>");
+            document.write(cmt.firstChild.nextSibling.nodeValue+"<br>");
+            document.write(cmt.firstChild.nextSibling.nodeType+"<br>");
+
+            console.log(cmt.firstChild.nextSibling.nodeName);
+            console.log(cmt.firstChild.nextSibling.nodeValue);
+            console.log(cmt.firstChild.nextSibling.nodeType);
+
+            document.write("-------h1 Element------<br>");
+            var elm1=document.getElementsByClassName("myh1");
+            document.write(elm1.nodeName+"<br>");
+           document.write(elm1.nodeValue+"<br>");
+           document.write(elm1.nodeType+"<br>");
+           console.log(elm1.nodeName);
+           console.log(elm1.nodeValue);
+           console.log(elm1.nodeType);
+           document.write("-------h1 text------<br>");
+           var txt=document.getElementsByClassName("myh1");
+           document.write(txt.firstChild.nodeName+"<br>");
+           document.write(txt.firstChild.nodeValue+"<br>");
+           document.write(txt.firstChild.nodeType+"<br>");
+            console.log(txt.firstChild.nodeName);
+            console.log(txt.firstChild.nodeValue);
+            console.log(txt.firstChild.nodeType);
+           
+            
+</script>
+<hr width="100%">
+<h3>getElementById</h3>
+<script>
+var result=document.getElementById("myp");
+document.write(result );
+console.log(result);
+document.write("<br>");
+var result1=document.getElementById("mydiv");
+document.write(result1);
+console.log(result1);
+
+</script>
+<hr width="100%">
+<h3>getElementsByClassName</h3>
+<script>              
+ var result =document.getElementsByClassName("myh1");
+ document.write(result );
+ console.log(result);
+</script>
+<hr width="100%">
+<h3>getElementByTagName</h3>
+<script>
+ var result=document.getElementsByTagName("p");
+ document.write(result);
+ console.log(result);
+ document.write("<br>");
+
+ var result1=document.getElementsByTagName("*");
+ document.write(result1);
+ console.log(result1);
+
+</script>
+<h2>Iterate class and tag collection</h2>
+<script>
+
+         var data=document.getElementsByTagName("p");
+                  //  console.log(data);
+                    var len=data.length;
+                    for( let i=0;i<len;i++){
+                              var result=document.getElementsByTagName("p")[i];
+                              document.write(result+"<br>");
+                              console.log(result);
+                    }
+</script>
+<script>
+           var data1=document.getElementsByClassName("myh1");
+                  //  console.log(data);
+                    var len=data1.length;
+                    for( let i=0;i<len;i++){
+                              var result1=document.getElementsByClassName("myh1")[i];
+                              document.write(result1+"<br>");
+                              console.log(result1);
+                    }
+</script>
+
+
+
+
+          
+</body>
+</html>

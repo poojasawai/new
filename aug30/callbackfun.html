@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //synchronous 
+
+        function show() {
+            document.write("this is callback function" + "<br>");
+        }
+
+        function call(callback) {
+            callback();
+        }
+        call(show);
+        document.write("End");
+
+        document.write("<br>");
+        // using arrow function
+        function abc(callback) {
+            a = 100;
+            callback(a);
+        }
+        abc(a => document.write("i am also callback function" + a));
+        document.write("<br>");
+
+        //asynchronous
+
+
+
+        setTimeout(function show() {
+            document.write("I am function:");
+        }, 5000)
+        document.write("End");
+    </script>
+</body>
+
+</html>

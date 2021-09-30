@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="myh2">Hello world</h2>
+    <script>
+        var h = document.getElementById("myh2");
+        var rightside = h.firstChild.splitText(2);
+        console.log(rightside);
+        document.write(rightside);
+        console.log(h.childNodes);
+    </script>
+    <hr width="100%">
+    <script>
+        var h1 = document.getElementById("myh2");
+        var result = h1.firstChild.substringData(0, 3);
+        console.log(result);
+    </script>
+</body>
+
+</html>

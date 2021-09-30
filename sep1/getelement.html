@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>tree</title>
+</head>
+<body>
+          <h1 id="head"></h1>
+          <h2>Hello world</h2>
+          <p id="para">Hello</p>
+          <p id="find">Bye</p>
+          <script>
+                    var result=document.getElementById("para");
+                    document.write(result); //not print in document [object HTMLParagraphElement] 
+                    console.log(result);
+          </script>
+          <hr width="100%">
+          <h1>WE are Learning javascript</h1>
+          <h1>Hello World</h1>
+          <h2>Now</h2>
+          <p id="para">Hello</p>
+          <p id="find">Bye</p>
+          <div>
+                    <p>1st p inside div</p>
+                    <p>2nd p inside div</p>
+          </div>
+          <script>
+                    var result=document.getElementsByTagName("p");
+                    document.write(result);
+                    console.log(result);
+          </script>
+                    <hr width="100%">
+
+        <h1>WE are Learning javascript</h1>
+          <h1>Hello World</h1>
+          <h2>Now</h2>
+          <p id="para">Hello <span>World</span></p>
+          <p id="find"> <span>Bye</span> world</p>
+          <div>
+                    <p>1st p inside div</p>
+                    <p>2nd p inside div</p>
+          </div>
+          <script>
+                    //whole document
+                    var result=document.getElementsByTagName("*");
+                    //document.write(result);
+
+                   // console.log(result);
+                   // only inside body
+                   var result=document.body.getElementsByTagName("*");
+                    //document.write(result1);
+                     console.log(result);
+
+
+          </script>
+
+          
+
+          
+</body>
+</html>

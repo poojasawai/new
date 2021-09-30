@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li id="three">three</li>
+    </ul>
+    <script>
+        const liveElements = document.getElementsByClassName('list-item');
+        // console.log(liveElements);
+        const notliveElements = document.querySelectorAll('.list-item');
+        // console.log(notliveElements);
+        // console.log(liveElements.length);
+        // console.log(notliveElements.length);
+
+        document.getElementById('three').className = 'list-item';
+
+        console.log(liveElements.length); //length of
+        console.log(notliveElements.length); // length of
+
+        console.log(liveElements);
+        console.log(notliveElements);
+    </script>
+</body>
+
+</html>

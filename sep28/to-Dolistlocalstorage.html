@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="border: 2px solid black; height: 300px; width: 500px; padding:5px;">
+        <h2>To Do List</h2>
+        <input type="text" id="enter_value" placeholder="Enter the value">
+        <button type="button" onclick="AddItem()">AddItem</button>
+        <button type="button" onclick="RemoveItem()">RemoveItem</button>
+        <div>
+            <h3 id="list" style="margin-top: 60px;">List Item</h3>
+            <ul id="ullist">
+
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        // let str = "";
+        let n = 0;
+
+        function AddItem() {
+            let enter_value = document.getElementById("enter_value").value;
+            let ullist = document.getElementById("ullist");
+            let li = document.createElement("li");
+            localStorage.setItem(n, enter_value);
+            li.innerHTML = enter_value;
+            ullist.appendChild(li);
+            n++;
+            document.getElementById("enter_value").value = " ";
+            /*   if (typeof(Storage) !== "undefined") {
+
+                        let enter_value = document.getElementById("enter_value").value;
+
+                        localStorage.setItem("key", enter_value);
+
+                        str += "<li>" + localStorage.getItem("key") + "</li>";
+                        document.getElementById("ullist").innerHTML = str;
+                    }*/
+
+
+        }
+        window.addEventListener('load', load);
+
+        function load() {
+            //   localStorage.length;
+            console.log(localStorage.length);
+            for (i = 0; i < localStorage.length; i++) {
+                console.log(i);
+                var key = localStorage.getItem(i);
+                console.log(key);
+                // console.log(localStorage.getItem(i));
+                var li = document.createElement("li");
+                li.innerHTML = key;
+                console.log(li);
+                let ullist = document.getElementById("ullist");
+
+                ullist.appendChild(li);
+                console.log(ullist);
+            }
+        }
+
+        function RemoveItem() {
+            localStorage.clear();
+            let ullist = document.getElementById("ullist");
+            ullist.remove();
+        }
+    </script>
+
+
+</body>
+
+</html>

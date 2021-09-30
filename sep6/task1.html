@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body id="myb">
+    <form id="myf">
+        <labe>First Name:</labe>
+        <input type="text" id="myname" placeholder="First Name" value=""><br><br>
+        <span id="errorinput" style="color: red;"></span>
+        <labe>Last Name:</labe>
+        <input type="text" id="lname" placeholder="Last Name" value=""><br><br>
+        <span id="errorlastname" style="color: red;"></span>
+        <labe>Email:</labe>
+        <input type="email" id="myemail"><br><br>
+        <span id="erroremail" style="color: red;"></span>
+        <label>Phone no:</label>
+        <input type="text" id="phone"><br><br>
+        <span id="errorpno" style="color: red;"></span>
+
+        <button type="button" onclick="add()">ADD</button>
+        <button type="button" onclick="dele()">Delete</button>
+    </form>
+    <div id="myd">
+
+    </div>
+    <script>
+        // accessing the value
+        function add() {
+            var input = document.getElementById("myname").value;
+            //console.log(input.value);
+            var lastname = document.getElementById("lname").value;
+            //console.log(lastname.value);
+            var email = document.getElementById("myemail").value;
+            //console.log(email.value);
+            var pno = document.getElementById("phone").value;
+            //console.log(pno.value);
+            var d = document.getElementById("myd");
+            //validation inputs 
+            var input1 = /^[a-zA-Z@ #. ]{3,30}$/;
+            var lastname1 = /^[a-zA-Z@ #. ]{3,30}$/;
+            var email1 = /^[A-Za-z_.]{6,}@[A-Za-z]{5,}[.]{1}[A-Za-z.]{2,}$/;
+            var pho1 = /^[6789]{1}[0-9]{9}$/;
+
+
+
+
+            var array = []; // creating empty array
+            if (input1.test(input)) {
+                array.push(input);
+            } else {
+                var error = document.getElementById("errorinput");
+                error.innerHTML = "invalid Username";
+                return false;
+            }
+            if (lastname1.test(lastname)) {
+                array.push(lastname);
+            } else {
+                var error = document.getElementById("errorlastname");
+                error.innerHTML = "invalid Username";
+                return false;
+            }
+            if (email1.test(email)) {
+                array.push(email);
+            } else {
+                var error = document.getElementById("erroremail");
+                error.innerHTML = "invalid Email";
+                return false;
+            }
+            if (pho1.test(pno)) {
+                array.push(pno);
+            } else {
+                var error = document.getElementById("errorpno");
+                error.innerHTML = "invalid Mobile No";
+                return false;
+            }
+
+            for (var i = 0; i < array.length; i++) {
+                var ele = document.createElement("p"); // creatinng new element 
+                ele.textContent = array[i];
+                d.appendChild(ele); // append  in div to creating new elem
+
+
+            }
+            input.value = " "; // clear the input
+            lastname.value = " ";
+            email.value = " ";
+            pno.value = " ";
+        }
+
+        function dele() {
+            var d = document.getElementById("myd");
+            d.removeChild(d.lastChild);
+            //d.remove // all record removes
+        }
+    </script>
+</body>
+
+</html>

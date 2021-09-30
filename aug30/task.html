@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>crud opration</title>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+          <table>
+                <tr>
+                    <td>
+<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+
+                    <div>
+                        <label>User Name:</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+
+                        <input type="text" name="Name" id="fullName">
+                    </div>
+                   
+                    <div>
+                        <label>Salary:</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>Age:</label>
+                        <input type="text" name="age" id="age">
+                    </div>
+                    <div>
+                    <input type="submit" value="Add" class="btn btn-primary">
+
+                    </div>
+                </form>
+                </td>
+                <td>
+                    <table class="list" id="employeeList">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Salary</th>
+                                <th>Age</th>
+                                <th> </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                  </td>
+                </tr>
+                </table>
+                <script src="script.js"></script>
+
+            
+          
+</body>
+</html>

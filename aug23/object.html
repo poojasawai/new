@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script> //reused class object is used.
+    document.write("<h3>"+"Object"+"</h3>");
+
+                    var person={};
+                    Object.defineProperty(person,"name",{
+                              writable:true, //ture
+                              value:"Bitcode",
+                              configurable:true,  //false
+                              enumerable:false   // true
+                    });
+                  document.write(person.name+"<br>");
+                    person.name="om";
+                   document.write(person.name+"<br>");
+                   //delete person.name;
+                    document.write(person.name+"<br>");
+                    for(prop in person){
+                              alert(prop);
+                    }
+                    
+                    
+                    
+                    document.write("<hr>");
+                    var obj={
+                              foo:'this is the value of foo',
+                              getFoo:function(){
+                                        return this.foo;
+                              },
+                              setFoo:function(val){
+                                        this.foo=val;}
+                    }
+                  //  console.log(obj.getFoo());// this is thevalue of foo
+                    document.write(obj.getFoo()+"<br>");
+                    //obj.setFoo('Hello');// d.w
+
+                   // console.log(obj.getFoo());
+                    // hello
+                    document.write("<hr>");
+                    var fees={ };
+                    fees['Rahul']=100;
+                    fees['Sarita']=200;
+                    fees['Rohan']=300;
+
+                  /*  fees.Rahul=100;
+                    fees.Sarita=100;
+                    fees.Rohan=100;*/
+
+            document.write(fees['sarita']);
+            document.write("<hr>");
+           var fees={ };
+           fees['rahul']=100;
+           fees['total']=function(){return(100+200+300);};
+           // fees.total
+           document.write(fees.total()); 
+           document.write("<hr>");
+           var fees=new Object();
+           fees['Rahul']=100;
+           fees['Sarita']=200;
+           fees['Rohan']=300;
+            /*  fees.Rahul=100;
+                    fees.Sarita=100;
+                    fees.Rohan=100;*/
+
+           document.write(fees['Sarita']);
+           document.write("<hr>");
+
+           var fees=new Object();
+           fees['Rahul']=100;
+           fees['Sarita']=200;
+           fees['Rohan']=200;
+          fees['total']=function(){return(100+200+300);};
+          /*  fees.Rahul=100;
+                    fees.Sarita=100;
+                    fees.Rohan=100;
+                    fees.total=function(){return(100+200+300);};*/
+
+           document.write(fees.total());
+           document.write("<hr>");
+           var fees={Rahul:100,Sarita:200,Rohan:300};
+           document.write(fees['Rahul']+"<br>");
+           document.write(fees['Sarita']+"<br>");
+           document.write(fees.Rohan);
+
+           document.write("<hr>");
+           var fees={Rahul:100,"Supar Man":400};
+           document.write(fees['Super Man']+"<br>");
+           document.write(fees["Super Man"]+"<br>");
+          // document.write(fees.Super Man);//we cannot access multiword key by dot notation
+          document.write("<hr>");
+          var fees={
+                    Rahul:100,
+                    Sarita:200,
+                    Rohan:300,
+                    total:function(){return(100+200+300);}
+          };
+          document.write(fees.total()+"<br>");
+          document.write(fees['total']());
+          document.write("<hr>");
+
+          document.write("<h3>"+"adding property"+"</h3>");
+          var fees={Rahul:100, Sarita:200};
+          console.log(fees);
+          document.write(fees.Rahul+" "+fees.Sarita+"<br>");
+          // adding property dynamically
+          //fees.sonam=600; //fees.['sonam'=600]
+         // document.write(fees.sonam+" "+fees.Rahul+" "+fees.Sarita+"<br>");
+          fees.show=function(){};
+         document.write(fees);
+         document.write("<hr>");
+         document.write("<h3>"+"delete property"+"</h3>");
+
+         var fees={Rahul:100, Sarita:200};
+         document.write(fees.Rahul+" "+fees.Sarita+"<br>");
+         delete fees.Rahul;
+         document.write(fees.Rahul+" "+fees.Sarita);
+         console.log(fees);
+         document.write("<hr>");
+
+         document.write("<h3>"+"Factry function"+"</h3>");
+         function mobile(){
+                   return{
+                             model:'Galaxy',
+                             price:function(){return"price RS.3000";}
+                   };
+         }
+         var samsung=mobile();
+         var nokia=mobile();
+         document.write(samsung.model+" "+samsung.price()+"<br>");
+         document.write(nokia.model+" "+nokia.price());
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </script>
+</body>
+</html>

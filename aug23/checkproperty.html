@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+           <script>   
+                     function mobile(model_no)
+                     {
+                              this.model=model_no;
+                              this.memory=4;
+
+                    }
+                    var samsung=new mobile('Galaxy');
+                    var nokia=new mobile('3310');
+
+                    if('memory' in nokia){
+                              document.write("Available");
+                    }
+                    else{
+                              document.write("DOes't Exits");
+                    }
+                    document.write("<br>");
+
+          </script>
+
+<script>
+                    function mobile(model_no)
+                    {
+                              this.model=model_no;
+                              this.color='white';
+
+                    }
+                    var samsung1= new mobile('Galaxy');
+                    var nokia1=new mobile('3310');
+
+
+                    if(nokia1.hasOwnProperty('ram')){
+                              document.write("Available");
+                    }else{
+                              document.write("doesnt Exits"+"<br>");
+                    }
+                    document.write("<br>");
+
+                    if(typeof nokia1.color!=='undefined'){
+                              document.write("Available");
+   
+                    }else{
+                              document.write("doesnt Exits"+"<br>");
+   
+                    }
+          </script>
+
+
+ 
+
+
+
+          </script>
+</body>
+</html>

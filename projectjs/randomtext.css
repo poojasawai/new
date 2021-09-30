@@ -1,0 +1,54 @@
+body {
+    background-color: violet;
+}
+
+.container {
+    border: 1px solid black;
+    width: 95%;
+    height: 100vh;
+    display: flex;
+}
+
+.btn {
+    position: relative;
+    left: 600px;
+    top: -90px;
+}
+
+.quotes {
+    border: 1px solid black;
+    width: 900px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    color: black;
+    background: white;
+    border: 10px solid #f4d1ae;
+}
+
+.quotes p,
+h3 {
+    font-size: 1.5rem;
+    font-family: "Architects Daugther";
+}
+
+@media(max-width:480px) {
+    .container {
+        height: 0;
+        position: relative;
+        top: -20px;
+    }
+    .quotes p,
+    h3 {
+        font-size: 1rem;
+    }
+    .btn {
+        position: relative;
+        left: 600px;
+        top: -90px;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                    //indexof()
+                    document.write("<h3>"+"Indexof"+"</h3>");
+
+                    var str="Hello friends how are you";
+                    document.write(str.indexOf("n"));//10 gives 1st ocurance only
+                    document.write("<br>");
+                    document.write(str.indexOf("e",10));//20
+                    document.write("<br>");
+                    document.write(str.indexOf("are"));//18
+                    document.write("<br>");
+
+                    document.write(str.indexOf("z"));//-1
+                    document.write("<br>");
+
+                    document.write(str.indexOf("h", 8));//14
+</script>
+<hr width="100%">
+<script>
+          //serch()
+          document.write("<h3>"+"Serch"+"</h3>");
+
+          var str="Hello friends how are you";
+          document.write(str.search("e")); //1
+          document.write("<br>");
+          document.write(str.search("lets"));//-1
+          document.write("<br>");
+          document.write(str.search("how"));//14 show 1st occurnce only
+</script>
+<hr width="100%">
+  <script>
+   //slice()
+   document.write("<h3>"+"slice"+"</h3>");
+
+   var str="Hello friends how are you";
+   document.write(str.slice(0,13));//13 not inculded
+   document.write("<br>");
+
+   document.write(str.slice(1,10));
+   document.write("<br>");
+
+   document.write(str.slice(1,-10));
+
+
+  </script>
+  <hr width="100%">
+  <script>
+            //substring()
+            document.write("<h3>"+"Substring"+"</h3>");
+
+            var str="Hello friends how are you";
+            document.write(str.substring(8,14));//14 not inculded
+            document.write("<br>");
+
+            document.write(str.substring(2,7));
+  </script>
+    <hr width="100%">
+  <script>
+            //substr()
+            document.write("<h3>"+"substr"+"</h3>");
+
+
+            var str="Hello friends how are you";
+            document.write(str.substr(8,10));
+            //8 is start of index and second 8 is character no
+  </script>
+</body>
+</html>

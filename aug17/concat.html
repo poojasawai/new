@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+              document.write("<h3>"+"Concat Array"+"</h3>");
+
+            //concat values
+              var arr1=["pooja","shiv","jay"];
+              var new_arr=arr1.concat("raj","rohini");
+              document.write(arr1+"<br>");
+              document.write(new_arr+"<br>");
+              document.write("<hr/>");
+
+
+              // concat two array
+              document.write("<h3>"+"Concat two Array"+"</h3>");
+
+              var arr1=["pooja","shiv","jay"];
+              var arr2=["raj","rohini"];
+              var new_arr=arr1.concat(arr2);
+              document.write(new_arr+"<br>");
+              document.write("<hr/>");
+
+
+              //concat three array
+              document.write("<h3>"+"Concat Three Array"+"</h3>");
+
+              var arr1=["pooja","shiv","jay"];
+              var arr2=["raj","rohini"];
+              var arr3=["ram","rohi"];
+              var new_arr=(arr1.concat(arr2,arr3));
+              document.write(new_arr+"<br>");
+              document.write("<hr/>");
+   //join method
+   document.write("<h3>"+"join method"+"</h3>");
+
+      var arr=["pooja","shiv","sonam"];
+      //separeted by
+      var new_arr=arr.join("/");
+      document.write(new_arr+"<br>");
+      document.write("<hr/>");
+      var arr=["pooja","shiv","sonam"];
+      //separeted by or using string
+      var new_arr=arr.join(" or ");
+      document.write(new_arr+"<br>");
+      document.write("<hr/>");
+
+      var arr=["pooja","shiv","sonam"];
+      //separeted by ""
+      var new_arr=arr.join(" ");
+      document.write(new_arr+"<br>");
+
+      document.write("<hr/>");
+      
+      document.write("<h3>"+"isArray method"+"</h3>");
+  
+      var arr=["pooja","shiv","sonam","raj"];
+      var result1=Array.isArray(["rose","lotus"]);//true
+      var result2=Array.isArray("iamstring");//false
+      var result3=Array.isArray(arr);
+      document.write(result1+"<br>");
+      document.write(result2+"<br>");
+      document.write(result3+"<br>");
+     
+      document.write("<h3>"+"Array Indexof method"+"</h3>");
+      var arr=["pooja","shiv","raj","sonam","raj"];
+      var position1=arr.indexOf("raj");
+      var position2=arr.indexOf("raj",3);
+      var position3=arr.indexOf("pritii");
+      document.write(position1+"<br>");
+      document.write(position2+"<br>");
+      document.write(position3+"<br>");
+</script>
+</body>
+</html>

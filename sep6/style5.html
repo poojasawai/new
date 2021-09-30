@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass1 {
+            background-color: blue;
+        }
+        
+        .myclass2 {
+            background-color: red
+        }
+    </style>
+</head>
+
+<body>
+    <p id="myp" class="myclass2 myclass3" style="color: yellowgreen;">Paragraph</p>
+    <script>
+        var p = document.getElementById("myp");
+        var elementClass = p.classList;
+        // it will add the given token tonthe list  add multipal class
+        //  elementClass.add("myclass4", "myclass5");
+        //  console.log(elementClass);
+        // adding single class
+        elementClass.add("myclass4");
+        console.log(elementClass);
+    </script>
+</body>
+
+</html>

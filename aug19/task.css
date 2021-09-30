@@ -1,0 +1,32 @@
+*{
+          margin:2px; 
+          padding: 3px; 
+          font-family: 'Maven Pro',sans-serif;
+           box-sizing: border-box; 
+
+}
+ body{ 
+          height: 50%;
+          width: 50%;
+          padding: auto;
+          text-align: center;
+        
+}
+#myprogress{
+          width: 70%;
+           height: 30px;
+         background-color:grey;
+         margin: auto;
+        
+         
+
+}
+#mybar{
+          width: 10%;
+          height: 20px;
+          background: indigo;
+          color: white;
+          text-align: center;
+         
+
+}

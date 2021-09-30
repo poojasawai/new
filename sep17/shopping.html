@@ -1,0 +1,372 @@
+l̥
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    #mydiv1 {
+        display: flex;
+    }
+    
+    #mydiv3 {
+        margin-left: 30px;
+        display: none;
+    }
+    
+    #mydiv4 {
+        display: none;
+    }
+    
+    #mydiv4,
+    input {
+        width: 60%;
+        height: 30%;
+    }
+    
+    #mydiv3,
+    label {
+        /* text-transform: uppercase; */
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+    
+    #mydiv4,
+    label {
+        /* text-transform: uppercase; */
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+    
+    table,
+    th,
+    td {
+        height: 40%;
+        width: 30%;
+        border-collapse: collapse;
+        padding: 15px;
+        margin: 2px;
+        background-color: lightblue;
+    }
+    
+    #mydiv2,
+    button {
+        padding: 0.3rem 0.5rem;
+        font-size: 1rem;
+        /* text-transform: uppercase; */
+        background-color: black;
+        color: white;
+    }
+    
+    #emoji {
+        margin-top: 400px;
+        margin-left: 600px;
+        position: fixed;
+    }
+</style>
+
+<body>
+    <div id="mydiv1">
+        <div class="mydiv2">
+            <table border="2" id="mytable">
+                <tr colspan="5">
+                    <th>SR No:</th>
+                    <th>Input</th>
+                    <th>Price</th>
+                    <th colspan="3">Quantity</th>
+                    <th>Total</th>
+
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>T_shirt</td>
+                    <td>299</td>
+                    <td id="t-shirt"></td>
+                    <td onclick="addQuetshirt();">+</td>
+                    <td onclick="subQuetshirt();">-</td>
+                    <td id="t-shirt_price"></td>
+
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Shirt</td>
+                    <td>599</td>
+                    <td id="shirt"></td>
+                    <td onclick="addQueshirt();">+</td>
+                    <td onclick="subQueshirt();">-</td>
+                    <td id="shirt_price"></td>
+
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>jeans</td>
+                    <td>699</td>
+                    <td id="jeans"></td>
+                    <td onclick="addQuejeans();">+</td>
+                    <td onclick="subQuejeans();">-</td>
+                    <td id="jeans_price"></td>
+
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Jocket</td>
+                    <td>1200</td>
+                    <td id="joket"></td>
+                    <td onclick="addQuejocket();">+</td>
+                    <td onclick="subQuejocket();">-</td>
+                    <td id="joket_price"></td>
+                </tr>
+                <tr>
+                    <th onclick="counttotal()">Counted Total:</th>
+                    <td colspan="6" id="counted">0</td>
+                </tr>
+
+            </table>
+            <br><br>
+            <button type="button" onclick="checkout()">CheckOut</button>
+            <br> <br>
+        </div>
+        <div>
+            <div id="mydiv3">
+                <label>Select Your Method Of Payment</label><br>
+                <button type="button" onclick="cash_pay()">Cash</button>
+                <button type="button">Card</button>
+            </div>
+            <div id="mydiv4">
+                <label>Enter Your Input:</label>
+                <input type="text" id="input">
+                <button onclick="done_remaing()">Done</button>
+            </div>
+        </div>
+        <div id="emoji">
+            <label id="mylabel">Please Rate App:)</label><br>
+            <i class="fas fa-angry" id="li1" onclick="emoji_li1()"></i>
+            <i class="fas fa-meh" id="li2" onclick="emoji_li2()"></i>
+            <i class="fas fa-frown" id="li3" onclick="emoji_li3()"></i>
+            <i class="far fa-smile-beam" id="li4" onclick="emoji_li4()"></i>
+            <i class="fas fa-grin-hearts" id="li5" onclick="emoji_li5()"></i>
+
+        </div>
+    </div>
+
+    <script>
+        var count = 0,
+            totshirt = 0;
+        var t = document.getElementById("counted");
+
+
+        function addQuetshirt() {
+            var table = document.getElementById("t-shirt");
+            count = count + 1;
+            table.textContent = count;
+            var tot_shirt = document.getElementById("t-shirt_price");
+            totshirt = totshirt + 299;
+            tot_shirt.textContent = totshirt;
+
+            t.textContent = parseInt(t.textContent) + 299; // 0+299
+
+        }
+
+        function subQuetshirt() {
+            count = count - 1;
+            var table = document.getElementById("t-shirt");
+            table.textContent = count;
+
+
+            //(- tshirt or price control method) 
+            totshirt = totshirt - 299;
+            var tot_shirt = document.getElementById("t-shirt_price");
+            tot_shirt.textContent = totshirt;
+            // Counted Total 
+            t.textContent = parseInt(t.textContent) - 299;
+
+        }
+        var count1 = 0,
+            totshirt1 = 0;
+
+        function addQueshirt() {
+
+            var table = document.getElementById("shirt");
+            count1 = count1 + 1;
+            table.textContent = count1;
+
+            var tot_shirt1 = document.getElementById("shirt_price");
+            totshirt1 = totshirt1 + 599;
+            tot_shirt1.textContent = totshirt1;
+            //Counted Total 
+            t.textContent = parseInt(t.textContent) + 599; // 0+2
+        }
+
+        function subQueshirt() {
+            count1 = count1 - 1;
+            var table = document.getElementById("shirt");
+            table.textContent = count1;
+            //
+            totshirt1 = totshirt1 - 599;
+            var tot_shirt1 = document.getElementById("shirt_price");
+            tot_shirt1.textContent = totshirt1;
+            //Counted Total 
+            t.textContent = parseInt(t.textContent) - 599;
+        }
+
+        var count2 = 0,
+            totjeans = 0;
+
+        function addQuejeans() {
+            var table = document.getElementById("jeans");
+            count2 = count2 + 1;
+            table.textContent = count2;
+            var tot_jeans = document.getElementById("jeans_price");
+            totjeans = totjeans + 699;
+            tot_jeans.textContent = totjeans;
+            //Counted Total 
+            t.textContent = parseInt(t.textContent) + 699;
+        }
+
+        function subQuejeans() {
+            count2 = count2 - 1;
+            var table = document.getElementById("jeans");
+            table.textContent = count2;
+
+            totjeans = totjeans - 699;
+            var tot_jeans = document.getElementById("jeans_price");
+            tot_jeans.textContent = totjeans;
+            //Counted Total 
+            t.textContent = parseInt(t.textContent) - 699;
+        }
+
+        var count3 = 0,
+            totjocket = 0;
+
+        function addQuejocket() {
+            var table = document.getElementById("joket");
+            count3 = count3 + 1;
+            table.textContent = count3;
+            var tot_jocket = document.getElementById("joket_price");
+            totjocket = totjocket + 1200;
+            tot_jocket.textContent = totjocket;
+
+            t.textContent = parseInt(t.textContent) + 1200;
+        }
+
+        function subQuejocket() {
+            count3 = count3 - 1;
+            var table = document.getElementById("joket");
+            table.textContent = count3;
+
+
+            totjocket = totjocket - 1200;
+            var tot_jocket = document.getElementById("joket_price");
+            tot_jocket.textContent = totjocket;
+            //Counted Total 
+
+            t.textContent = parseInt(t.textContent) - 1200;
+        }
+
+        function checkout() {
+            document.getElementById("mydiv3").style.display = 'block';
+        }
+
+        function cash_pay() {
+            document.getElementById("mydiv4").style.display = 'block';
+
+        }
+
+        function done_remaing() {
+            var t = document.getElementById("counted").textContent;
+            var input1 = document.getElementById("input").value;
+            // var tot = parseInt(t.textContent);
+            // var inp = parseInt(input1.value);
+
+            var remaing = t - input1;
+            console.log(remaing);
+            var p = document.createElement("p");
+            if (remaing > 0) {
+                p.textContent = `ThankYou Please Pay Remaing Payment=  ${remaing}`;
+
+            } else {
+                p.textContent = `ThankYou For Visit.`;
+
+            }
+            var div = document.getElementById("mydiv4")
+            div.appendChild(p);
+
+
+        }
+
+        function emoji_li1() {
+            document.getElementById("mylabel").textContent = "ThankYou For Rating visit Agin."
+            document.getElementById("li1").style.fontSize = "70px";
+            document.getElementById("li2").style.display = "none";
+            document.getElementById("li3").style.display = "none";
+            document.getElementById("li4").style.display = "none";
+            document.getElementById("li5").style.display = "none";
+            document.getElementById("li1").style.color = " darkorange";
+
+        }
+
+        function emoji_li2() {
+            document.getElementById("mylabel").textContent = "ThankYou For Rating visit Agin."
+            document.getElementById("li1").style.display = "none";
+            document.getElementById("li2").style.fontSize = "70px";
+            document.getElementById("li3").style.display = "none";
+            document.getElementById("li4").style.display = "none";
+            document.getElementById("li5").style.display = "none";
+            document.getElementById("li2").style.color = " darkorange";
+
+        }
+
+        function emoji_li3() {
+            document.getElementById("mylabel").textContent = "ThankYou For Rating visit Agin."
+            document.getElementById("li1").style.display = "none";
+            document.getElementById("li2").style.display = "none";
+            document.getElementById("li3").style.fontSize = "70px";
+            document.getElementById("li4").style.display = "none";
+            document.getElementById("li5").style.display = "none";
+            document.getElementById("li3").style.color = " darkorange";
+
+        }
+
+        function emoji_li4() {
+            document.getElementById("mylabel").textContent = "ThankYou For Rating visit Agin."
+            document.getElementById("li1").style.display = "none";
+            document.getElementById("li2").style.display = "none";
+            document.getElementById("li3").style.display = "none";
+            document.getElementById("li4").style.fontSize = "70px";
+            document.getElementById("li5").style.display = "none";
+            document.getElementById("li4").style.color = " darkorange";
+
+        }
+
+        function emoji_li5() {
+            document.getElementById("mylabel").textContent = "ThankYou For Rating visit Agin."
+            document.getElementById("li1").style.display = "none";
+            document.getElementById("li2").style.display = "none";
+            document.getElementById("li3").style.display = "none";
+            document.getElementById("li4").style.display = "none";
+            document.getElementById("li5").style.fontSize = "70px";
+            document.getElementById("li5").style.color = " darkorange";
+
+
+        }
+    </script>
+</body>
+
+</html>

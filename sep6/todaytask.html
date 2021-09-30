@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>map() method</h2>
+    <script>
+        // it method creates new array with the results of calling a 
+        //provided function on every ele in the calling array
+        // it is used to modifide the array 
+        // syntax= map(function(current value),this Args); 
+        // (index or array) optinal
+        var arr = [1, 2, 3, 4, 5];
+        var newarr = arr.map((data) => {
+            data++;
+            console.log(data); // new array
+
+        });
+        console.log(arr); // its not modifide origninal array
+    </script>
+    <script>
+        var arr1 = [
+
+            {
+                product: "book",
+                price: "100"
+            }, {
+                product: "pen",
+                price: "50"
+            }, {
+                product: "pensil",
+                price: "20"
+            }, {
+                product: "marker",
+                price: "200"
+            },
+        ];
+        var newarray = arr1.map((data) => {
+            // return data.product;
+            return data.price; // 
+        });
+        console.log(newarray);
+    </script>
+    <script>
+        // filter method -used to serch 
+        // filter method creates a new array with all ele that
+        // pass the test implemented by the function
+
+        //syntax=arr.filter(function(data),this.args)
+        var arr = [5, 14, 10, 70, 13];
+        var narr = arr.filter((data, index, arr) => {
+            //console.log(`${data},index no ${index} and ${arr}`);
+            return data > 10; // op=14,70,13
+        });
+        console.log(narr);
+        // find 
+        var arr = [5, 14, 10, 70, 13];
+        var narr = arr.find((data) => {
+            return data > 10; // op=fist occurences used to serch
+        });
+        console.log(narr);
+    </script>
+    <script>
+        // reduce method = executes a reducer(small) function on each ele of the array,result in single op value.
+        //  we have show single op then used this method 
+        // its take 4 arguments
+        //accumulator => collect the all
+        // current value
+        //current index
+        // source arry
+        // syntax=arr.reduce((a,cv),this args)
+        var array = [1, 2, 3, 4, 5];
+        var sum = array.reduce((a, curr) => {
+            // return a; op=curr value 1
+            return a + curr; //op= 15 a=1+1=2 
+        });
+        console.log(sum);
+    </script>
+    <script>
+        //   splice => it method modifide or change the content of array and
+        // we can add ele or remove the existing ele in arr . the method change the original array
+        //syntax= splice(index,deletecount, element);
+        var arr = ["pooja", "Nitin", "Ravi"];
+        // var n = arr.splice(1, 0, "ajay"); //insert ele
+        // var n1 = arr.splice(1); // remove all
+        // var n1 = arr.splice(1, 1); // remove index 1 and dletecount 1= op nitin dele 
+        // var n1 = arr.splice(0, 1, "new"); // existing cha array vr new add krycha and 1 dele 
+        var n1 = arr.splice(2, 0, "NEWW"); // add only 2 index
+        console.log(arr);
+    </script>
+    <script>
+        // slice method =>the method takes 2 parameter (start end)
+        // thus method not included the end index
+        // existing array not modifide,return new array
+        //syntax(start end)  
+        var a = [1, 2, 3, 4, 5];
+        console.log(a.slice(0, 2)); // start 0 and end 2 but 2 not included
+        console.log(a.slice(1, 5));
+    </script>
+    <script>
+        // for of loop
+        //  used to travrse array as well as all iterablle objects.
+        //syntax= for(var vname of arr)
+        let ar = [1, 2, 3, 4, 5];
+        for (let value of ar) {
+            console.log(value)
+        }
+        // forEach loop=> the foeEach calls provided function once for each element in array ,in order.
+        // syntax=array.forEach(fun(value,index,arr))
+        //value=cuurent value 
+        //index=array index
+        // arr- the array object the current ele belongs to
+        var array1 = ["pooja", "sai", "ram", 25];
+        array1.forEach(function(name, index) {
+            console.log(name, index);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form star</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="h2">Welcome TO <span class="s1">Movie Rating</span></h2><br>
+        <h3 class="h3">Please Rate The <span class="s2">Movie</span></h3><br>
+
+        <div class="starDiv">
+
+            <i class="far fa-star" id="s1" onclick="getRate1();"></i>
+            <i class="far fa-star" id="s2" onclick="getRate2();"></i>
+            <i class="far fa-star" id="s3" onclick="getRate3();"></i>
+            <i class="far fa-star" id="s4" onclick="getRate4();"></i>
+            <i class="far fa-star" id="s5" onclick="getRate5();"></i>
+
+        </div>
+        <div id="output">
+
+        </div>
+    </div>
+    <script>
+        function getRate1() {
+            var rate = prompt("Tell about star");
+            var parent = document.getElementById("output");
+            s1.setAttribute("class", "fas fa-star");
+            var new_node = document.createElement("p");
+            new_node.textContent = `${rate} Thanks For Rating:) `;
+            parent.appendChild(new_node);
+
+        }
+
+        function getRate2() {
+            var rate = prompt("Tell about star");
+            var parent = document.getElementById("output");
+            s2.setAttribute("class", "fas fa-star");
+            var new_node = document.createElement("p");
+            new_node.textContent = `${rate} Thanks For Rating:) `;
+            parent.appendChild(new_node);
+
+        }
+
+        function getRate3() {
+            var rate = prompt("Tell about star");
+            var parent = document.getElementById("output");
+            s3.setAttribute("class", "fas fa-star");
+            var new_node = document.createElement("p");
+            new_node.textContent = `${rate} Thanks For Rating:) `;
+            parent.appendChild(new_node);
+
+        }
+
+        function getRate4() {
+            var rate = prompt("Tell about star");
+            var parent = document.getElementById("output");
+            s4.setAttribute("class", "fas fa-star");
+            var new_node = document.createElement("p");
+            new_node.textContent = `${rate} Thanks For Rating:) `;
+            parent.appendChild(new_node);
+
+        }
+
+        function getRate5() {
+            var rate = prompt("Tell about star");
+            var parent = document.getElementById("output");
+            s5.setAttribute("class", "fas fa-star");
+            var new_node = document.createElement("p");
+            new_node.textContent = `${rate} Thanks For Rating:) `;
+            parent.appendChild(new_node);
+
+        }
+    </script>
+
+</body>
+
+</html>

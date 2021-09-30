@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="myid">
+        <!-- this is comment -->
+        <span>We are learning javascript</span>
+        <em>Hello</em>
+    </h1>
+    <p id="myid1">I am paragraph</p>
+    <p id="myid2"><span>I am span</span>I am paragraph</p>
+    <script>
+        var result = document.getElementById("myid");
+        console.log(result.childNodes);
+        console.log(result.lastChild); //text
+        console.log(result.lastElementChild); //<em></em>
+        // result.lastChild.textContent = "last node hoon main";
+        //result.lastElementChild.textContent = "Last Element Node Hoon main";
+    </script>
+</body>
+
+<hr width="100%">
+
+<body>
+    <h1 id="mid">
+        <!-- this is comment -->
+        <span>We are learning javascript</span>
+        <em>Hello</em>
+        <!-- this is comment -->
+
+    </h1>
+    <p id="myid1">I am paragraph</p>
+    <p id="myid2"><span>I am span</span>I am paragraph</p>
+    <script>
+        var result = document.getElementById("mid");
+        console.log(result.childNodes);
+        console.log(result.lastChild.previousSibling);
+        console.log(result.children);
+        console.log(result.lastChild.previousElementSibling);
+        result.lastElementChild.previousElementSibling.textContent = "I am learning DOM";
+    </script>
+
+</body>
+
+</html>

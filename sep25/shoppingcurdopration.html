@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curd</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    
+    #shoppingList {
+        border: 2px solid black;
+        margin: 30px 0 0 0 0;
+        padding: 20px;
+    }
+    
+    input {
+        margin: 5px;
+    }
+</style>
+
+<body onload="loadElements()">
+    <h1>Shopping List</h1>
+    <hr>
+    <div id="shoppingList">
+        <div>
+            <label for="txtItemId">Enter Item Id</label>
+            <input type="text" name="" id="txtItemId">
+        </div>
+        <div>
+            <label for="txtItemName">Enter Item Name</label>
+            <input type="text" name="" id="txtItemName">
+        </div>
+        <div>
+            <label for="txtItemCost">Enter Item Cost</label>
+            <input type="text" name="" id="txtItemCost">
+        </div>
+        <div>
+            <label for="txtItemQty">Enter Item Quantity</label>
+            <input type="text" name="" id="txtItemQty">
+        </div>
+        <div>
+            <input type="button" value="New" onclick="btnNewClick()">
+            <input type="button" value="Save" onclick="btnSaveClick()">
+            <input type="button" value="Update" onclick="btnUpdateClick()">
+            <input type="button" value="Delete" onclick="btnDeleteClick()">
+        </div>
+        <div>
+            <ul id="list">
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        var txtItemId, txtItemName, txtItemCost, txtItemQty, list;
+        var shoppingItems;
+
+        function shoppingItem(itmId, itmName, itmCost, itmQty) {
+            this.itemId = itmId;
+            this.itemName = itmName;
+            this.itemCost = itmCost;
+            this.itemQty = itmQty;
+        }
+        shoppingItems = [
+            new shoppingItem(10, "marker", 50, 5),
+            new shoppingItem(20, "cellphone", 10000, 1)
+        ]
+
+        function loadItems() {
+            str = ""; // create one empty string.
+            for (var i = 0; i < shoppingItems.length; i++) {
+                console.log(shoppingItems);
+                console.log(shoppingItems[i].itemId);
+
+                // first take 0 position and 2 and so on ... 
+                str += "<li>" + shoppingItems[i].itemId + " X " +
+                    shoppingItems[i].itemName + " X " +
+                    shoppingItems[i].itemCost + " X " +
+                    shoppingItems[i].itemQty + "</li>";
+            }
+            list.innerHTML = str; //assign thus value on ul (list is id for ul). 
+
+        }
+        // we can only create input value are emptyor null.
+        function btnNewClick() {
+            txtItemQty.value = "";
+            txtItemName.value = "";
+            txtItemId.value = "";
+            txtItemCost.value = "";
+            txtItemId.focus();
+        }
+
+        function btnSaveClick() {
+            // we can push the retrire value in array.
+            shoppingItems.push(new shoppingItem(txtItemId.value, txtItemName.value, txtItemCost.value, txtItemQty.value));
+            loadElements(); // call load elements function
+            // loadItems(); // also thus work
+            //console.log(shoppingItems);
+        }
+
+        function loadElements() {
+            // take all references 
+            txtItemCost = document.getElementById("txtItemCost");
+            txtItemName = document.getElementById("txtItemName");
+            txtItemId = document.getElementById("txtItemId");
+            txtItemQty = document.getElementById("txtItemQty");
+            list = document.getElementById("list");
+            loadItems(); // call loaditems
+
+        }
+
+        function btnUpdateClick() {
+            for (var i = 0; i < shoppingItems.length; i++) {
+                // check item id array and input id array are same then update.
+                if (shoppingItems[i].itemId == txtItemId.value) {
+                    shoppingItems[i].itemName = txtItemName.value; //marker
+                    shoppingItems[i].itemQty = txtItemQty.value; // 40
+                    shoppingItems[i].itemCost = txtItemCost.value; //14
+                    break;
+
+                }
+            }
+            loadElements();
+            //loadItems();  //we can directly call loaditems function
+        }
+
+        function btnDeleteClick() {
+            for (var i = 0; i < shoppingItems.length; i++) {
+                // check item id array and input id array are same then delete.
+
+                if (shoppingItems[i].itemId == txtItemId.value) {
+                    shoppingItems.splice(i, 1);
+                    break;
+                }
+            }
+            loadElements();
+            //  loadItems(); 
+        }
+    </script>
+</body>
+
+</html>

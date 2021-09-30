@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                     document.write("<h3>"+"Display Name&salary and Addrees"+"</h3>");
+
+                    class employee
+                    {
+                             constructor(name,salary,address)
+                             {
+                                       this.ename=name;
+                                       this.esalary=salary;
+                                      this.eaddress=address;
+                              }
+                             show()
+                             {
+                                       return "Name:"+ this.ename +" "+"Salary:"+this.esalary+" " +"Address:"+this.eaddress+"<BR>";
+                             }
+                   }
+                   class manager extends employee
+                   {
+                             constructor(name ,salary,address)
+                             {
+                                       document.write("Manager:")
+                                       super(name,salary,address); //using super we r calling constu
+                              }
+                    }
+                    class developer extends employee
+                    {
+                              constructor(name,salary,address)
+                              {
+                                        document.write("Debelopr:");
+                                        super(name,salary,address);
+                              }
+                    }
+
+                  var m=new manager("ram",5000,"shrirampur");
+                   document.write(m.show()+"<br>");
+                   var d=new developer('Sai',60000,'pune');
+                   document.write(d.show());
+
+      document.write("<hr>");
+
+/*class Employee
+      {
+                
+
+      }
+      class Manager extends Employee
+      {
+                showmanager()
+                {
+                          return "Name:pooja"+"<br>"+"salary:30000"+"<br>"+"Address:pune"+"<br>";
+                }
+      }
+      class Developer extends Employee
+      {
+                showdeveloper()
+                {
+                    return "Name:shiv"+"<br>"+"salary:40000"+"<br>"+"Address:Nashik"+"<br>";
+ 
+                }
+      }
+      var s=new Developer();
+    // document.write(s.showmanager()+"<br>");
+      document.write(s.showdeveloper());
+
+      var m=new manager();
+    // document.write(m.showdeveloper()+"<br>");
+      document.write(s.showmanager());*/
+      document.write("<h3>"+"Check property"+"</h3>");
+
+      class book{
+                constructor()
+                {
+                          this.pages="page";
+                }
+      }
+      var b=new book();
+      //hasOwnProperty
+      if(b.hasOwnProperty('pages')){
+                              document.write("Available");
+                    }
+                    else{
+                              document.write("doesnt Exits"+"<br>");
+                    }
+                    document.write("<br>");
+
+                    if('pages' in b){
+                              document.write("Available");
+                    }else{
+                              document.write("DOes't Exits");
+                    }
+                    document.write("<br>");
+
+                    if(typeof b.pages!=='undefined'){
+                              document.write("Available");
+   
+                    }
+                    else{
+                              document.write("doesnt Exits"+"<br>");
+                    }
+
+
+
+
+
+          </script>
+</body>
+</html>

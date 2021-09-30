@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h3>Display 4 digit form +ve string</h3>
+
+          <p id="demo"></p>
+
+
+          <script>
+                    function mydigit()
+                    {
+                       
+                        var str="we are 1234 learning javascript 5678 12";
+                        var d1=/\d{4}/g;
+                        var result=str.match(d1);
+                        document.getElementById("demo").innerHTML=result;
+                    }
+                    mydigit();
+
+              </script>
+              <hr width="100%">
+              <h3>3 letterword form above string</h3>
+
+              <p id="demo1"></p>
+
+              <script>
+
+                    function mydigit1()
+                    {
+                       
+                        var str="we are 1234 lea rning javascript 5678 12";
+                         var d1=/\b[a-zA-z]{3}\b/g;
+                        var result=str.match(d1);
+                        document.getElementById("demo1").innerHTML=result;
+                    }
+                    mydigit1();
+                    </script>
+                <hr width="100%">
+                <h3>Return the next number</h3>
+
+                <script>
+                          function add(n,n1)
+                          {
+                             n=n+1;
+                             n1=n1+1;
+                             document.write(("1 =>")+ n+"<br>");
+                             document.write(("2 =>")+n1+"<br>");
+
+                     }
+                          add(1,2)
+                </script>
+
+
+</body>
+</html>

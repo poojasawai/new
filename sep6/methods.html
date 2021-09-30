@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>length</h3>
+    <h2 id="myh2">Hello World</h2>
+    <script>
+        //length 
+        var h = document.getElementById("myh2");
+        var result = h.firstChild.length;
+        console.log(result);
+        document.write(result);
+    </script>
+    <hr width="100%">
+    <h3>Data</h3>
+    <script>
+        var h1 = document.getElementById("myh2");
+        // getting data
+        var getdata = h.firstChild.data;
+        console.log(getdata);
+        document.write(getdata);
+    </script>
+    <hr width="100%">
+    <h2 id="myh">hello world</h2>
+    <script>
+        var h3 = document.getElementById("myh");
+        h.firstChild.appendChild("india");
+        console.log(h.childNodes);
+    </script>
+    <script>
+        var h = document.getElementById("myh2");
+        h.firstChild.deleteData(0, 7); // (start length)   
+        console.log(h, childNodes);
+    </script>
+    <script>
+        var htag = document.getElementById("myh2");
+        h.firstChild.insertData(3, "bye");
+        console.log(htag.childNodes);
+    </script>
+    <script>
+        var htag1 = document.getElementById("myh2"); // start with index 0 will take length 4 n will replace text
+        h.firstChild.replaceData(0, 4, "bye");
+        console.log(htag1.childNodes);
+    </script>
+
+</body>
+
+</html>

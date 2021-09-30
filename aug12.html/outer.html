@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                    var a=10;
+                    function outerfun(){
+                              var j="j is a local vari of outer function";
+                              document.write(j+"<br>");
+                              function innerfun(){
+                                        var k="k is local vari of inner function";//local variable
+                                        var c=a+j+k;
+                                        document.write(k+"<br>");//k accessible is function
+                                        document.write(j+"<br>");//j accessible is function
+                              }
+                              innerfun();
+                            document.write(j+"<br>");//k accessible is function
+                            //document.write(k+"<br>")
+                    }
+                    outerfun();
+
+          </script>
+</body>
+</html>

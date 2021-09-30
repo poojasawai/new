@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h1>event methods</h1>
+          <div id="mydiv" style="width: 200px; height: 200px; background-color: peru;">
+                    <a href="https://twitter.com/" id="mylink">click</a>
+          </div>
+          <script>
+                    function stopLink(e){
+                              e.preventDefault();
+                             // e.stopPropagation(); //color not change but open defalut
+                    }
+                    function div1(e){
+                              this.style.backgroundColor='orange';
+                    }
+                    var d=document.getElementById("mydiv");
+                    var l=document.getElementById("mylink");
+                    d.addEventListener("click",div1,false);
+                    l.addEventListener("click",stopLink,false);
+
+          </script>
+
+</body>
+</html>

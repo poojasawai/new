@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        #mydiv1 {
+            text-align: center;
+            font-family: sans-serif;
+            background-color: lightslategrey;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        
+        #mydiv2 {
+            margin-top: 15px;
+        }
+        
+        #add {
+            color: blue;
+            font-size: 150%;
+        }
+        
+        #sub {
+            color: red;
+            margin-left: 15px;
+            font-size: 150%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv1">
+        <label>Name:</label>
+        <input type="text" name="" placeholder="Enter Your Name"><br><br>
+        <label>Blog Content:</label><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <button type="submit">Submit</button>
+        <p id="para"></p>
+        <div id="mydiv2">
+            <i class="fas fa-thumbs-up" id="add" onclick="addlike()"></i>
+            <i class="fas fa-thumbs-down" id="sub" onclick="dislike()"></i>
+        </div>
+    </div>
+    <script>
+        count = 0;
+
+        function addlike() {
+            var add = document.getElementById("add");
+            document.getElementById("para").textContent = "ThankYou.Have A Nice Day:)"
+
+            count = count + 1;
+            add.textContent = count;
+
+        }
+
+        function dislike() {
+            count = count + 1;
+            var sub = document.getElementById("sub");
+            document.getElementById("para").textContent = "WE will work on It.ThankYou."
+            sub.textContent = count;
+
+
+        }
+    </script>
+</body>
+
+</html>

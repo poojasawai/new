@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title class="para">Document</title>
+</head>
+
+<body>
+    <h1>WE are Learning javascript</h1>
+    <h1 class="para myclass">Hello World</h1>
+    <h2>Now</h2>
+    <p class="para">Hello <span>pune</span> <em>worldddd</em> <span>jsss</span></p>
+    <p class="myclass"> <span>Bye</span>pune</p>
+    <div id="show">
+        <p>1st p inside div</p>
+        <p class="para">2nd p inside div<span class="myspan">inside</span><em>div</em></p>
+    </div>
+    <span class="myspan"></span>
+    <p id="show1">I am paragraph</p>
+    <div id="show2">I am something Div</div>
+</body>
+<script>
+    // more specific
+    var data = document.getElementById("show");
+    var result = document.querySelectorAll("span.myspan");
+    document.write(result);
+    console.log(result);
+    document.write("<br>");
+
+    var result1 = document.getElementById("show").querySelectorAll("span.myspan");
+    document.write(result1);
+    console.log(result1);
+    document.write("<br>");
+
+    var result3 = document.querySelectorAll("#show > .para >span.myspan");
+    document.write(result3);
+    console.log(result3);
+    document.write("<br>");
+
+    var result4 = document.getElementById("show").querySelectorAll("p,span,em");
+    document.write(result4);
+    console.log(result4);
+</script>
+
+</html>

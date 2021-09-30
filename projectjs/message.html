@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="message.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>message</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="message">
+            <p>
+                <h3 style="text-align: center; font-weight: bold;">Pass The Message</h3>
+                <p style="border-bottom: 2px solid rgba(211, 211, 211, 0.5);"></p>
+
+            </p>
+            <p>
+                <label for="message-input">Enter a message</label><br>
+                <button style="border-radius: 5px 0 0 5px;"><i class="far fa-envelope"></i></button><input id="message-input" type="text">
+            </p>
+            <p><button onclick="getmessage()">Submit</button></p>
+            <p id="message-output" style="text-align: center; text-transform: uppercase;"></p>
+        </div>
+    </div>
+    <script>
+        let messageinput = document.getElementById("message-input");
+        /* messageinput.addEventListener("keydown", function(event) {
+             if (event.key == "Enter") {
+                 getmessage();
+             }
+         })*/
+
+        function getmessage() {
+            document.getElementById("message-output").innerHTML = messageinput.value;
+            messageinput.value = " ";
+        }
+    </script>
+</body>
+
+</html>

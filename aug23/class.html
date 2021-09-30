@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                   // class declaration
+                  class mobile{
+                             constructor(){
+                                       // instance member
+                                       this.a=12;
+                                       this.foo=function(){
+                                                 return " instace method";
+                                       };
+
+                             }
+                             // prototype method
+                             display(){
+                                       return "prototype method";}
+                       }
+
+                       var samsung= new mobile();
+                       document.write(samsung.a+"<br>");
+                       document.write(samsung.display());
+                       document.write("<hr>");
+            </script>
+                     
+                    <script> /*class mobile{
+                             constructor(){
+                                       // instance member
+                                       this.a=21;
+                                       this.show=function(){
+                                                 return " instace method";
+                                       };
+                                       display(){
+                                                 return "prototype member";
+                                     
+                                      }
+
+                              }*/
+                          
+
+                            class mobile1{
+                             constructor(model_no,color){
+                                       // instance member
+                                       this.model=model_no;
+                                       this.clr=color;
+                                         }
+                                 show(){
+                                                 return this.model+"price RS .3000"+this.clr;
+                                       }
+
+                              }
+                              var nokia=new mobile1('galaxy','white');
+                              var lg=new mobile1('note4','black');
+                              document.write(nokia.show()+"<br>");
+                              document.write(lg.show());
+                              </script>
+
+                       <hr width="100%">
+                         
+                       <script>
+                            var Mobile=function(model_no,sprice){
+                                 this.model=model_no;
+                                 this.color='white';
+                                 var price=3000; //private property
+                                 this.sp=sprice;
+                                 var show=function()
+                                 {return "HEllo world";
+                                  
+                                };
+                       };
+                       var samsung=new Mobile('galaxy',2000);
+                       var nokia=new Mobile('3310',1000);
+                       document.write(nokia.price);
+                       document.write(nokia.show());
+
+                       </script>
+                                              <hr width="100%">
+
+                       <script>
+                       var mobile2=function(model_no,sprice){
+                                 this.model=model_no;
+                                 this.color='white';
+                                 var price=3000; //private property
+                                 this.sp=sprice;
+                                 this.sellingprice=function(){return (price);};
+                       };
+          
+                    var samsung=new mobile2('galaxy',2000);
+                    var nokia=new mobile2('3310',1000);
+                    document.write(nokia.price+"<br>");
+                    document.write(nokia.sellingprice());
+                    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

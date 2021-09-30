@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="myid">
+        Hello H1
+        <!-- this is comment -->
+        <span>We are learning javascript</span>
+    </h1>
+    <p id="myid1">I am paragraph</p>
+    <p id="myid2"><span>I am span</span>I am paragraph</p>
+    <script>
+        var result = document.getElementById("myid");
+        console.log(result.firstChild); // text hello h1
+        // console.log(result.firstElementChild); // span
+        // result.firstChild.textContent = "Hello World";
+        //  result.firstElementChild.textContent = "I am learning DOM";
+    </script>
+</body>
+
+</html>

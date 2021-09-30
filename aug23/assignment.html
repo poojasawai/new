@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+     document.write("<h3>"+"Factory function"+"</h3>");
+      function car(car_name,car_model){
+                   return{
+                             name:car_name,                         
+                           model:function(){return car_model;}
+                   };
+         }
+         var car1=car( "maruti",2001);
+         var car2=car( "BMW",3000);
+      document.write(car1.name+" "+car1.model()+"<br>");
+      document.write(car2.name+" "+car2.model()+"<br>");
+
+   
+         document.write("<hr>");
+         document.write("<h3>"+"add and delete"+"</h3>");
+
+document.write("<h3>"+"adding property"+"</h3>");
+          var car={model:300,name:"maruti"};
+          console.log(car);
+          document.write(car.model+" "+car.name+"<br>");
+          // adding property dynamically
+          car.newmodel=600; 
+          document.write(car.newmodel+" "+car.model+" "+car.name+"<br>");
+         // car.show=function(){};
+         //document.write(car);
+         document.write("<h3>"+"delete"+"</h3>");
+         var car={model:300, name:"maruti"};
+         document.write(car.model+" "+car.name+"<br>");
+         delete car.model;
+         document.write(car.model+" "+car.name);
+         console.log(car);
+         document.write("<hr>");
+         document.write("<h3>"+"remove 1st 3 character"+"</h3>");
+         var a="sachin";
+         var c=a.substr(3);
+         document.write(c+"<br>");
+         document.write("<hr>");
+         document.write("<h3>"+"array addition"+"</h3>");
+         var arr=[1,2,3,4];
+         var sum=0;
+
+         for( var i=0;i<arr.length;i++)
+         {
+          sum=sum+arr[i];
+         }
+         document.write(sum+"<br>");
+
+
+
+
+
+
+
+
+         
+         
+
+
+
+
+
+          
+
+
+          </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        margin: 30px;
+        padding: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    #empList {
+        background-color: wheat;
+        border: 2px solid black;
+        margin: 30px 0 0 0 0;
+        padding: 20px;
+        width: 500px;
+    }
+    
+    input {
+        margin: 5px;
+    }
+    
+    #mydiv {
+        display: flex;
+    }
+    
+    #b1 {
+        margin-right: 10px;
+        width: 50px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    table {
+        margin-left: 30px;
+        height: 80px;
+    }
+    
+    .fas {
+        color: #ff0000;
+    }
+</style>
+
+<body onload="loadElements()">
+    <h1>Emp List</h1>
+    <hr>
+    <div id="mydiv">
+        <div id="empList">
+            <div>
+                <label for="txtItemId">Enter Emp Id</label>
+                <input type="text" name="" id="txtItemId">
+            </div>
+            <div>
+                <label for="txtItemName">Enter Emp Name</label>
+                <input type="text" name="" id="txtItemName">
+            </div>
+            <div>
+                <label for="txtItemsalary">Enter Emp Salary</label>
+                <input type="number" min=0 name="" id="txtItemsalary">
+            </div>
+            <div>
+                <input type="button" class="btn btn-info" value="New" onclick="btnNewClick()">
+                <input type="button" class="btn btn-success" value="Save" onclick="btnSaveClick()">
+
+            </div>
+
+        </div>
+        <div>
+            <div>
+                <table id="list" border="1"> </table>
+                <!-- <ul id="list"></ul> -->
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var txtItemId, txtItemName, txtItemsalary, list;
+        var empItems;
+
+        function empItem(itmId, itmName, itmSalary) {
+            this.itemId = itmId;
+            this.itemName = itmName;
+            this.itemSalary = itmSalary;
+        }
+        empItems = [
+            new empItem(101, "Mr.Ravi", 155000),
+            new empItem(102, "Mr.Ajay", 150000)
+        ]
+
+        function loadItems() {
+            // str = "";
+
+
+            for (var i = 0; i < empItems.length; i++) {
+                var tr = document.createElement("tr")
+                var td1 = document.createElement("td");
+
+                td1.textContent = empItems[i].itemId;
+                var td2 = document.createElement("td");
+
+                td2.textContent = empItems[i].itemName;
+                var td3 = document.createElement("td");
+                td3.textContent = empItems[i].itemSalary;
+
+                var td4 = document.createElement("td");
+
+                var update1 = document.createElement("i");
+                update1.setAttribute("class", "fa fa-pencil", "b1");
+                // update1.textContent = "Update";
+                update1.setAttribute("onclick", "btnUpdateClick()");
+                update1.setAttribute("id", "b1");
+
+                var Delete1 = document.createElement("i");
+                Delete1.setAttribute("class", "fas fa-trash-alt");
+                //  Delete1.textContent = "Delete";
+                Delete1.setAttribute("onclick", " btnDeleteClick() ");
+
+                Delete1.setAttribute("id", "b1");
+
+                td4.appendChild(update1)
+                td4.appendChild(Delete1);
+
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+
+
+                list.appendChild(tr);
+
+
+            }
+
+
+
+
+            /*  for (var i = 0; i < empItems.length; i++) {
+                  console.log(empItems);
+                  console.log(empItems[i].itemId);
+
+                  str += "<li>" + empItems[i].itemId + "  " +
+                      empItems[i].itemName + "  " +
+                      empItems[i].itemSalary + "</li>";
+              }
+              list.innerHTML = str;*/
+        }
+
+        function btnNewClick() {
+            txtItemId.value = "";
+            txtItemName.value = "";
+            txtItemsalary.value = "";
+            txtItemId.focus();
+        }
+
+        function btnSaveClick() {
+            // list.remove();
+            for (var i = 0; i < list.rows.length; i++) {
+                list.rows[i].textContent = "";
+            }
+
+            empItems.push(new empItem(txtItemId.value, txtItemName.value, txtItemsalary.value));
+            loadElements();
+        }
+
+        function loadElements() {
+            txtItemsalary = document.getElementById("txtItemsalary");
+            txtItemId = document.getElementById("txtItemId");
+            txtItemName = document.getElementById("txtItemName");
+
+            list = document.getElementById("list");
+            loadItems();
+        }
+
+        function btnUpdateClick() {
+            for (var i = 0; i < list.rows.length; i++) {
+                list.rows[i].textContent = "";
+            }
+            for (var i = 0; i < empItems.length; i++) {
+                if (empItems[i].itemId == txtItemId.value) {
+                    empItems[i].itemName = txtItemName.value;
+                    empItems[i].itemSalary = txtItemsalary.value;
+                    break;
+                }
+            }
+            loadElements();
+        }
+
+        function btnDeleteClick() {
+            for (var i = 0; i < list.rows.length; i++) {
+                list.rows[i].textContent = "";
+            }
+            for (var i = 0; i < empItems.length; i++) {
+                if (empItems[i].itemId == txtItemId.value) {
+                    empItems.splice(i, 1);
+                    break;
+                }
+            }
+            loadElements();
+        }
+    </script>
+</body>
+
+</html>

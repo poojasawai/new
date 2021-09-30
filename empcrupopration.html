@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        margin-top: 30px;
+    }
+    
+    #shoppingList {
+        border: 2px solid black;
+        margin: 30px 0 0 0 0;
+        padding: 20px;
+    }
+    
+    input {
+        margin: 5px;
+    }
+</style>
+
+<body onload="loadElements()">
+    <h1>Emp List!!</h1>
+    <div id="mylist">
+        <div>
+            <label for="txtItemId">Enter Emp Id</label>
+            <input type="text" name="" id="txtItemId">
+        </div>
+        <div>
+            <label for="txtItemName">Enter Emp Name</label>
+            <input type="text" name="" id="txtItemName">
+        </div>
+        <div>
+            <label for="txtItemsalary">Enter Emp Salary</label>
+            <input type="number" min=0 name="" id="txtItemsalary">
+        </div>
+        <div>
+            <input type="button" class="btn btn-success" value="Save" onclick="btnSaveClick()">
+            <input type="button" class="btn btn-info" value="Update" onclick="btnUpdateClick()">
+            <input type="button" class="btn btn-danger" value="Delete" onclick="btnDeleteClick()">
+
+        </div>
+        <div>
+            <ul id="list">
+
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        var txtItemId, txtItemName, txtItemsalary, list;
+        var empItems;
+        // parameterise function . we not used thus function we get only one emp info.
+        function empItem(itmId, itmName, itmSalary) {
+
+            // class=>used reused dataa.
+            this.itemId = itmId;
+            this.itemName = itmName;
+            this.itemSalary = itmSalary;
+        }
+        empItems = [
+            //we can create object using class.
+
+            /*  new empItem(1, "Mr.Ravi", 155000),
+              new empItem(2, "Mr.Ajay", 150000)*/
+        ]
+
+        function loadempinfo() {
+            str = ""; // create one empty string.
+            for (var i = 0; i < empItems.length; i++) {
+                console.log(empItems);
+                console.log(empItems[i].itemId);
+
+                // first take 0 position and 2 and so on ... 
+                str += "<li>" + empItems[i].itemId + "  " +
+                    empItems[i].itemName + "  " +
+                    empItems[i].itemSalary + "</li>";
+            }
+            list.innerHTML = str;
+        }
+
+        function btnSaveClick() {
+            // we can push the retrire value in array.
+            empItems.push(new empItem(txtItemId.value, txtItemName.value, txtItemsalary.value));
+            loadempinfo();
+            txtItemId.value = "";
+            txtItemName.value = "";
+            txtItemsalary.value = "";
+        }
+
+
+        function loadElements() {
+            txtItemsalary = document.getElementById("txtItemsalary");
+            txtItemId = document.getElementById("txtItemId");
+            txtItemName = document.getElementById("txtItemName");
+
+            list = document.getElementById("list");
+            loadempinfo();
+        }
+
+        function btnUpdateClick() {
+            for (var i = 0; i < empItems.length; i++) {
+                // check item id array and input id array are same then update.
+                if (empItems[i].itemId == txtItemId.value) {
+                    empItems[i].itemName = txtItemName.value; //marker
+                    empItems[i].itemSalary = txtItemsalary.value; // 40
+                    break;
+
+                }
+            }
+            //  loadElements();
+            loadempinfo();
+        }
+
+        function btnDeleteClick() {
+            for (var i = 0; i < empItems.length; i++) {
+                // check item id array and input id array are same then delete.
+
+                if (empItems[i].itemId == txtItemId.value) {
+                    empItems.splice(i, 1);
+                    break;
+                }
+            }
+            // loadElements();
+            loadempinfo();
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                    var firstName="Hello";
+                    var lastName="world";
+                    document.write(firstName+" "+lastName);
+          </script>
+<hr width="100%">
+          <script>
+                    //concat method
+                    var str1="Hello";
+                    var str2=" World";
+                    var str3=" Something";
+                    var new_str=str1.concat(str2,str3," ANYthing");
+                    document.write(new_str);
+
+          </script>
+          <hr width="100%">
+
+   <script>
+          //    \n not work for document .write
+       console.log("Hello \n World");
+
+ </script>
+
+<script>
+     // wrong syntax 
+     /*console.log("Hello World");*/
+
+          console.log(`Hello World Something`)
+          // will not work for document .write
+
+          var str=`Hello,
+          World`;
+          document.write(str);
+</script>
+<hr width="100%">
+   <script>
+        var str1="Hello";
+        document.write(str1+" "+"World");
+
+        document.write("<h1>"+"Hello Javascript"+"</h1>");
+        document.write("<h1>"+str1+"World!!!"+"</h1>");
+        // but with the help of tempalte literls u can easily accievs it 
+        
+        
+
+   </script>
+   <hr width="100%">
+
+
+   <script>
+      let firstName1 = "John";
+     let lastName1 = "Doe";
+
+      let text = `Welcome ${firstName1}, ${lastName1}!`;
+      document.write("<i>"+text+"</i>");
+   </script>
+      <hr width="100%">
+
+      <script>
+                var a=5;
+                var b=4;
+                document.write(`${a+b}`);
+      </script>
+         <hr width="100%">
+
+         <script>
+                   function myfun(say){
+                             return say;
+                   }
+                   document.write(`${myfun("Hello")}`);
+         </script>
+                  <hr width="100%">
+           <script>
+                     // length property
+                     // the length property returns the length of string.
+
+                     var str="Hello world";
+                     document.write(str.length);
+           </script>
+                             <hr width="100%">
+           <script>
+                     //charAT mathod
+
+                     var str="HELLO WORLD";
+                     document.write(str.charAt(4));
+           </script>
+                             <hr width="100%">
+
+
+<script>
+          //charcodeAT mathod
+
+         // the charCodeAt method returns the unicode of the character at a specified index in a sting
+
+          var str="HELLO WORLD";
+          document.write(str.charCodeAt(3));
+</script>
+
+
+
+
+
+</body>
+</html>

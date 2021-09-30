@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- settomeout=set a timer which exicutes a function after time expair
+          clear timeout=cancle a timer -->
+    <p id="myp">splic it method modifide or change the content of array and we can add ele or remove the existing ele in arr . the method change the original array plic it method modifide or change the content of array and we can add ele or remove the existing splic
+        it method modifide or change the content of array and we can add ele or remove the existing ele in arr . the method change the original array plic it method modifide or change the content of array and we can add ele or remove the existing</p>
+
+    <button type="button" id="mybtn">clear time</button>
+    <script>
+        // settimeout
+        /*  function changecss() {
+              document.getElementById("myp").style = 'color:red';
+          }
+          setTimeout(changecss, 5000);*/
+        // direct function 
+        /*  setTimeout(function changecss() {
+              document.getElementById("myp").style = 'color:blue';
+          }, 2000);*/
+
+        // using anonomus function
+        /*  setTimeout(function() {
+              document.getElementById("myp").style = 'color:blue';
+
+          }, 2000);*/
+        // using arrow function
+        /*  setTimeout(() => {
+              document.getElementById("myp").style = 'color:blue';
+
+          }, 2000);*/
+        // clear timeout method
+        var timerid = setTimeout(() => {
+            document.getElementById("myp").style = 'color:red';
+        }, 5000);
+
+        function clartime() {
+            clearTimeout(timerid);
+        }
+        document.getElementById("mybtn").addEventListener("click", clartime);
+    </script>
+
+</body>
+
+</html>

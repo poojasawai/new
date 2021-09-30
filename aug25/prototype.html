@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                 //super class
+
+                 document.write("<h3>"+"prototype property"+"</h3>");
+
+                    var mobile=function(){
+                              this.a=10;
+                    }
+                    // prototype property of mobile
+                    mobile.prototype.z=30;
+                    //sub class
+
+                    var samsung=function(){
+                              // it intilization and call super class constructor without this you can not access super calss property using sub class object.
+                              mobile.call(this);
+                              this.b=20;
+                    }
+                    //prototype inheritance
+                    samsung.prototype=Object.create(mobile.prototype);
+                    //samsung.prototype.constructor=samsung;
+
+                    var s=new samsung();
+                   document.write(s.a+"<br>"); //10
+                    document.write(s.b+"<br>"); // 20 
+                     document.write(s.z+"<br>");//30
+
+          </script>
+</body>
+</html>

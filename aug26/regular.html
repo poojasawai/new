@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+             document.write("<h3>"+"Regular Exprestion"+"</h3>");
+                         // regular expretion is used in pattrrn matching and search and replace function in text.
+                         // syntax: /pattrn/modifiers;
+                    var str ="Hello World World Hello Hello";
+                    document.write(str.search("hello")+"<br>");
+                    document.write(str.replace("Hello","hello")+"<br>");
+                    document.write(str.search(/hello/i)+"<br>");// hello and Hello are same i is case ensitive
+                    document.write(str.replace(/hello/i,"hello")+"<br>");
+                    document.write(str.replace(/hello/ig,"hello"));
+
+
+          </script>
+          <hr width="100%">
+          <script>
+                    function is_name(str)
+                    {
+                              var regexp=/^[a-zA-z@. ]{3,30}$/;
+                              if(regexp.test(str))
+                              {
+                                        return true;
+                              }
+                              else
+                              {
+                                        return false;
+                              }
+                    }
+                    console.log(is_name("Pooja"));
+                    document.write(is_name("Pooja123")+"<br>");// false
+                    document.write(is_name("Pooja")+"<br>");// true
+                    document.write(is_name("Pooja@. "));// true
+
+
+          </script>
+                    <hr width="100%">
+                 <button onclick="myfunction()">click me</button>
+                 <p id="demo"></p>
+                 
+                 <script>
+                           function myfunction()
+                           {
+                                     var str="Hello 34 world hiiii";
+                                     var patt1=/\d/g;
+                                    // var patt1=/\s/g; //count white spaces
+
+                                     var result=str.match(patt1);
+                                     document.getElementById("demo").innerHTML=result;
+                           }
+
+                  </script>
+                    <hr width="100%">
+                    <button onclick="match()">match</button>
+
+                    <script>
+                        function match()
+                        {
+                                  var str="It is time to rhyme a rayme A poem I must write";
+                                 var res=str.match(/me/g); // will find globally                         
+                                   document.write(res);
+                        }
+                    </script>
+
+</body>
+</html>

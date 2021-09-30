@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                    //var str="bi12tc3;removes no of string
+                    //var arr=[91,32,23,83,55]
+                   
+              document.write("<h3>"+" length of Array "+"</h3>");
+
+                   var arr1=["sachin","virat","ashish","mahi"];
+                    var len=arr1.length;
+                    document.write(len);
+                    document.write("<br/>");
+
+             document.write("<h3>"+" positive Indexof ashish "+"</h3>");
+
+                    var arr1=["sachin","virat","ashish","mahi"];
+                       var position1=arr1.indexOf("ashish");
+                       document.write(position1+"<br>");
+
+                       document.write("<h3>"+"add and delete element"+"</h3>");
+
+
+                       var arr1=["sachin","virat","ashish","mahi"];
+                       //var arr2=["pooja","shiv"];
+                      // var new_arr=arr1.concat(arr2);
+                       //document.write(new_arr+"<br>");
+                       //or
+                      // arr1.push("pooja",20);only push element display.
+                      document.write(arr1.push("pooja",20));// using this return the length  of array  after adding element in original aaray. 
+                       document.write("<br>"+arr1+"<br>");
+                    
+                       document.write("<h3>"+" delete 1st element"+"</h3>");
+
+                       document.write(arr1.shift());
+                       document.write("<br>");
+                       document.write("<h3>"+"Display Array"+"</h3>");
+
+                       document.write(arr1+"<br>");
+                       document.write("<hr/>");
+                       document.write("<h3>"+"Display array asending order"+"</h3>");
+
+                       var arr=[91,32,23,83,55];
+                       var result=arr.sort((a,b)=>a-b);// not using also display op
+                        document.write(result);
+                        document.write("<br>");
+                        document.write("<h3>"+"Display array deasending order"+"</h3>");
+                    var c=result.reverse();
+                      document.write(c);
+                       // var result1=arr.sort((a,b)=>b-a);
+                        //document.write(result1);
+
+                        document.write("<hr/>");
+                        document.write("<h2>"+"Remove number in string"+"</h2>");
+
+                        var str="bi12tc3o5d8e";
+                        var len=str.length;
+                        document.write(len+"<br>");
+                        for(i=0;i<=len;i++)
+                        {
+                                  if(str.charAt(i)>=0 && str.charAt(i)<=9)
+                                  {
+
+                                  }
+                                  else{
+                                            document.write(str.charAt(i));
+                                  }
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </script>
+</body>
+</html>

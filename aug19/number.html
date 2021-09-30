@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                    var number=21;
+                   document.write(number+"<br>");
+                   document.write(Number.MAX_VALUE+"<br>"); // largest positive value 
+                    document.write(Number.MIN_VALUE+"<br>"); // smallest value
+                   //var a=parseInt(prompt("Enter the number:"));
+                  // document.write("Entered value is :"+a);
+
+                 // var date=parseInt(prompt("Enter the "))
+
+                 document.write("<hr/>");
+                 var a=10;
+                 var b=20;
+                 var c=5e3;
+                 var d=34e-5;
+                 var x=new Number(100);
+                 document.write(typeof(a)+" :");
+                 document.write(a+"<br>");
+                 document.write(typeof(b)+" :");
+                 document.write(b+"<br>");
+                 document.write(typeof(c)+" :");
+                 document.write(c+"<br>");
+
+                 document.write(typeof(d)+" :");
+                 document.write(d+"<br>");
+
+                 document.write(typeof(x)+" :");
+                 document.write(x+"<br>");
+                  var e="100";
+                  document.write(typeof(e)+" :");
+                  document.write(e+"<br>");
+
+                  document.write("<hr/>");
+                  document.write("<h3>"+"Number with string "+"</h3>");
+
+                  // Number with string
+                  var a="60";
+                  var b=20;
+                  var c=10;
+                  var d="Hello";
+                   document.write(b+c+"<br>");//n+n=n
+                   document.write(a+c+"<br>");//s+n=s
+                   document.write(b+a+"<br>");//n+s=s
+                   document.write(b+d+"<br>");//s+s=s
+                   document.write(d+b+"<br>");//s+s=s
+                   document.write("<br>");
+                   document.write("<hr/>");
+
+                    // other than
+                    document.write(c-b+"<br>");//n+n=n
+                    document.write(a-b+"<br>");//n+n=n
+                    document.write(b-a+"<br>");//n+n=n
+                    document.write(b-d+"<br>");//n+s=nan
+                    document.write(d-b+"<br>");//s+n=nan
+                    document.write("<br>");
+                    document.write("<hr/>");
+
+
+                    // type of
+                    document.write(typeof(b+c)+"<br>");//n+n=n
+                    document.write(typeof(a+b)+"<br>");//s+n=s
+                    document.write(typeof(b+a)+"<br>");//n+s=s
+                    document.write(typeof(b+d)+"<br>");//n+s=s                   
+                     document.write(typeof(d+b)+"<br>");//s+n=s
+                     document.write("<br>");
+                     document.write("<hr/>");
+
+
+                     // other than
+
+                     document.write(typeof(c-b)+"<br>");//n-n=n
+                     document.write(typeof(a-b)+"<br>");//s-n=n
+                     document.write(typeof(b-a)+"<br>");//n-n=n
+                     document.write(typeof(b-d)+"<br>");//n-n=n
+                     document.write(typeof(d-b)+"<br>");//n-n=n
+                     document.write("<hr/>");
+
+                     // NaN 
+                     document.write("<h3>"+"NaN "+"</h3>");
+
+                     var a="50";
+                     var b=10;
+                     var c=20;
+                     var d="Hello";
+                    document.write(d/b+"<br>");
+                   //document.write(c/d);
+                  // document.write(c/b+"<br>");
+                  document.write("<hr/>");
+                  document.write("<h3>"+" isNaN "+"</h3>");
+
+                  var a="50"; // converts string to no
+                     var b=10;
+                     var c=20;
+                     var d="Hello";
+                     if(isNaN(b)){
+                               document.write(`not a number`);
+                     }else{
+                              document.write(`  number`);
+ 
+                     } 
+                     document.write("<br>"+typeof(a)+"<br>");
+                     document.write("<br>");
+
+                     if(NaN == NaN){// not check this directly print else conditin
+                               document.write("Equal");
+                     }else{
+                               document.write("not equal");
+                     }
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </script>
+</body>
+</html>

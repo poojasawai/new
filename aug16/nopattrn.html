@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                     ab();       
+                    function ab(){
+                    var m=1,n=5;
+                    debugger;
+                    for( var i=5;i>=1;i--)
+                    {
+                         for(var j=5;j>=m;j--)
+                         {
+                              document.write(j);
+              
+                         }
+                         document.write("<br> ");
+                         m++;
+          
+                    }
+               }
+          </script>
+          <hr width="100%">
+          <script type="text/javascript">
+		var i, j, k, space, a = 1;
+		space = 5 - 1;
+		for (i = 1; i <= 5; i++) {
+			for (k = 1; k <= space; k++) {
+				document.write("&nbsp;");
+			}
+			for (j = a; j <= i; j++) {
+				document.write(j);
+			}
+			document.write("<br> ");
+			space--;
+		}
+	</script>
+                    <hr width="100%">
+
+          <script type="text/javascript">
+
+                          
+                    var i,j;
+                    for(i=5;i>=1;i--){
+                              for(j=5;j>=i;j--)
+                              {
+                                        document.write(j);
+          
+                              }
+                              document.write("<br> ");
+          
+                              }                              
+                    </script>
+                                        <hr width="100%">
+<script>
+     var n=153,r,sum=0,temp;
+     temp=n;
+     while(n>0)
+     {
+          r=n%10;
+          sum=sum+(r*r*r);
+          n=Math.floor(n/10);
+     }
+     if(temp==sum)
+     {
+          document.write("number is amstrong");
+     }
+     else
+     {
+          document.write("number is not amstrong");
+ 
+     }
+</script>
+          
+          
+          
+</body>
+</html>

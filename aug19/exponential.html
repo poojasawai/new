@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>              
+              document.write("<h3>"+"  Exponential method value"+"</h3>");
+
+                    var x=2.224566;
+                    document.write("Exponential method value:"+x.toExponential()+"<br>");
+                    document.write("fixed method value:"+x.toFixed(3)+"<br>");
+                    document.write("precision method value:"+x.toPrecision(3)+"<br>");
+
+                    document.write("string method value:"+x.toString()+"<br>");
+                    var a=3;
+                    var b=5;
+                    var c=a.toString();
+                    add=c+b; // concat the string 
+                   // add =a+b;
+                    document.write("addition is:"+add);//op=> is 35
+                    document.write("<hr>");
+                    document.write("<h3>"+"infinity and - infinity "+"</h3>");
+
+                      // infinity and - infinity
+                    document.write(5/0);
+                    document.write("<br>");
+                    document.write(-5/0);
+                    document.write("<br>");
+
+                    document.write("5"/0);
+                    document.write("<hr>");
+                    document.write("<h3>"+"Number is integer"+"</h3>");
+
+                    document.write(Number.isInteger()+"<br>");//false
+                    document.write(Number.isInteger(100)+"<br>");//true
+                    document.write(Number.isInteger(-100)+"<br>");//true
+                    document.write(Number.isInteger(100.45)+"<br>");//false
+                    document.write(Number.isInteger(200-100)+"<br>");//true
+                    document.write(Number.isInteger(0.1)+"<br>");//false
+                    document.write(Number.isInteger("100")+"<br>");//false
+                    document.write(Number.isInteger("Hello")+"<br>");//false
+
+                    document.write("<hr>");
+                    document.write("<h3>"+"Number "+"</h3>");
+
+                    var a="50";
+                    var a=10;
+                    var d="Hello";
+
+
+                      document.write(Number.isNaN(d)+"<br>");
+                      document.write(Number.isNaN("Hello")+"<br>");
+                      document.write(Number.isNaN("5")+"<br>");
+                      document.write(Number.isNaN(0/0)+"<br>");
+
+                      document.write("<hr>");
+
+                      document.write(Number(true)+"<br>");// 1
+                      document.write(Number(false)+"<br>");//0
+                      document.write(Number("100")+"<br>");// 100 convert to number
+                      document.write(Number(100/"Hello")+"<br>");//NaN
+                     
+                      document.write("<hr>");
+                   document.write("<h3>"+"Date Objects"+"</h3>");
+                   // date obj provides a sophistical set of methods for manipulating dates and times.
+                   // it reads client machine date and time 
+                   //days of month beginns is index(o.1....11)
+                   //created with the new Date() 
+                      var tarikh=new Date();
+                      document.write(tarikh+"<br>");
+
+                      var tarikh1=new Date(67668787);
+                      var tarikh2=new Date(8640000);
+                      document.write(tarikh1+"<br>");
+                      document.write(tarikh2+"<br>");
+                      document.write("<hr>");
+
+                      var tarikh2=new Date(2020,4,25,9,45,35,0);
+                      var tarikh3=new Date(2018,4,25,9,45,35);
+                      var tarikh4=new Date(2019,4,25,9,45);
+                      var tarikh5=new Date(2018,4,25,9);
+                      var tarikh6=new Date(2018,4,25);
+                      var tarikh7=new Date(2018,4);
+                      var tarikh8=new Date(2021);//1970 "2021"=>is 2021
+                      document.write(tarikh2+"<br>");
+                      document.write(tarikh3+"<br>");
+                      document.write(tarikh4+"<br>");
+                      document.write(tarikh5+"<br>");
+                      document.write(tarikh6+"<br>");
+                      document.write(tarikh7+"<br>");
+                      document.write(tarikh8+"<br>");
+
+                      document.write("<hr>");
+                     // month satrt the 0,1,2,,,,,,11. 
+                      var tarikh1=new Date("aug 20,2021 15:15:06");
+                      document.write(tarikh1+"<br>");
+
+                      document.write("<hr>");
+                      document.write("<h3>"+"Date"+"</h3>");
+                      var tarikh=new Date("2017-05");
+                      document.write(tarikh+"<br>");
+
+                      var tarikh=new Date("2018");
+                      document.write(tarikh+"<br>");
+
+                      var tarikh=new Date("2018-06-21T12:00:00Z");
+                      document.write(tarikh+"<br>");
+
+                      var tarikh=new Date("06/25/2019");
+                      document.write(tarikh+"<br>");
+                      document.write("<hr>");
+                      document.write("<h3>"+" long Date"+"</h3>");
+                      var tarikh=new Date("March 20 2021");
+                      document.write(tarikh+"<br>");
+
+                      document.write("<hr>");
+                      document.write("<h3>"+"  set time ,date,min,s Date"+"</h3>");
+
+                      // day as num=1-31
+                      //hours as num=0-23
+
+                      var tarikh1=new Date();
+                      document.write(tarikh1+"<br>");
+
+                      tarikh.setHours(21);
+                      document.write(tarikh+"<br>");
+
+                      tarikh2.setMinutes(50);
+                      document.write(tarikh2+"<br>");
+
+                      tarikh3.setSeconds(60);
+                      document.write(tarikh3+"<br>");
+
+                      tarikh4.setMonth(6);
+                      document.write(tarikh4+"<br>");
+
+                      tarikh5.setFullYear(2022);
+                      document.write(tarikh5+"<br>");
+
+                      tarikh6.setFullYear(2023,4,15);
+                      document.write(tarikh6+"<br>");
+                      document.write("<hr>");
+
+                      document.write("<h3>"+" Date"+"</h3>");
+
+                      var tarikh=new Date();
+                      document.write(tarikh+"<br>");
+                      document.write("Hours:"+tarikh.getHours()+"<br>");
+
+                      document.write("minutes:"+tarikh.getMinutes()+"<br>");
+
+                      document.write("Seconds:"+tarikh.getSeconds()+"<br>");
+
+                      document.write("Month:"+tarikh.getMonth()+"<br>");
+
+                      document.write("Year:"+tarikh.getFullYear()+"<br>");
+
+                      document.write("Day:"+tarikh.getDay()+"<br>");
+
+                      document.write("<hr>");
+
+                      var tarikh=new Date();
+                      document.write(tarikh+"<br>");
+                      var month=tarikh.getMonth();
+                      var day=tarikh.getDay();
+                      document.write(getMonthName(month)+"<br>");
+                      document.write(getDayName(day)+"<br>");
+
+                      function getMonthName(monthnumber){
+                                var monthname=["January","February","March","Aprial","May","June","July","August","september","october","nonember","December"];
+                                return monthname[monthnumber];
+                      }
+
+                      /*function getMonthName(monthnumber){
+                                var monthname=[0,1,2,3,4,5,6,7,8,9,10,11];
+                                return monthname[monthnumber];
+                      }*/
+
+                     function getDayName(daynumber){
+                               var dayname=["sunday","monday","tuesday","wedneday","thursday","friday","satureday"];
+                               return dayname[daynumber];
+                     }
+
+                    /* function getDayName(daynumber){
+                               var dayname=[1,2,3,4,5,6,7];
+                               return dayname[daynumber];
+                     }*/
+
+
+
+
+
+
+
+
+
+
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </script>
+</body>
+</html>

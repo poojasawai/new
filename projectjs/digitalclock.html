@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="digitalclock.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="digitalclock">
+            <h1 id="day">MON</h1>
+            <h1 id="hour">04</h1>
+            <h1 id="bar1">|</h1>
+            <h1 id="minute">16</h1>
+            <h1 id="bar2">|</h1>
+            <h1 id="ampm">PM</h1>
+
+
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', calculateTime)
+
+        function calculateTime() {
+            var date = new Date();
+            //  console.log(date);
+            var dayNumber = date.getDay();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var ampm = hour >= 12 ? 'PM' : 'AM';
+            var dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+            hour = hour % 12;
+            hour = hour ? 12 : '12';
+            hour = hour < 10 ? '0' + minute : minute;
+            document.getElementById("day").innerHTML = dayNames[dayNumber];
+            document.getElementById("hour").innerHTML = hour;
+            document.getElementById("minute").innerHTML = minute;
+            document.getElementById("ampm").innerHTML = ampm;
+
+            setTimeout(calculateTime(), 200)
+        }
+    </script>
+
+
+</body>
+
+</html>

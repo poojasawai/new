@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <script>
+                 /*  class father{
+                             showFmoney(){
+                                       return "Fther money <br>";
+                             }
+                   } 
+                   class son extends father{
+                             showSmoney(){
+                                       return " son money<br>";
+                             }
+                   }
+                   class grandson extends son{
+                             showGmoney(){
+                                       return "Grandson money";
+                             }
+                   }
+                   var t=new grandson();
+                   document.write(t.showFmoney);
+                   document.write(t.showSmoney);
+                   document.write(t.showGmoney);
+
+                   var f=new father();
+                   document.write(f.showFmoney());
+                   document.write(f.showSmoney());
+
+                   document.write("<hr>");*/
+                   
+                   class Father{
+                             constructor(money){
+                                       this.Fmoney=money;
+                             }
+                             showFmoney(){
+                                       return this.Fmoney+"father money<br>";
+                             }
+                   }
+                   class son extends Father{
+                             constructor(money){
+                                       super(money); //using super we r calling constu
+                                       this.a=12;
+
+                             }
+                             showSmoney(){
+                                       return "son money <br>";
+                             }
+                   }
+
+                   var s=new son(5000);
+                   document.write(s.showFmoney()+"<br>");
+                   document.write(s.showSmoney());
+                 //document.write(s.a);
+
+
+
+
+
+
+
+          </script>
+</body>
+</html>

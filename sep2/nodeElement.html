@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html id="myid">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>We are Learning javascript
+        <!--this is comment  -->
+    </h1>
+    <p id="myid1">I am paragraph</p>
+    <script>
+        var result = document.getElementById("myid");
+        var result1 = document.getElementById("myid1");
+        // it will return the parent wther parent is element  node or not 
+        //  console.log(result.parentNode); // # document
+        // it will return null if the parent is not an element 
+        //  console.log(result.parentElement); // null
+
+        // here both return parent ecoze both have parent element
+        console.log(result1.parentNode);
+        console.log(result1.parentElement);
+    </script>
+    <hr width="100%">
+
+
+</body>
+
+<body>
+    <h1 id="myid">
+        <!-- this is comment -->we are Learning javascript
+    </h1>
+    <p id="myid1"> I am paragraph</p>
+    <p id="myid2">
+        <span>I am span</span> I am paragraph</p>
+    <script>
+        var result = document.getElementById("myid");
+        // itinclude text node ,comment node and any white spaces -space ,tab,enter etc
+        console.log(result.childNodes);
+        console.log(result.children);
+    </script>
+
+</body>
+
+</html>

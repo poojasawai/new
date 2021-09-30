@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let products = [{
+            name: "pen",
+            cost: 30,
+            color: "Red"
+        }, {
+            name: "Duster",
+            cost: 25,
+            color: "Black"
+        }, {
+            name: "market",
+            cost: 10,
+            color: "Blue"
+        }, {
+            name: "Tape",
+            cost: 40,
+            color: "White"
+        }, ];
+        // using find method. but we can find multipal we used the filter method.
+        var nproducts = products.find(function(ele) {
+            return ele.color = "red";
+        })
+        console.log(nproducts);
+        // sorting array in desending order.
+        products.sort(function(a, b) {
+            return parseFloat(b.cost) - parseFloat(a.cost);
+        });
+        console.log(products);
+    </script>
+    <script>
+        let arr = [40, 60, 30, 70, 55, 10, 85, 90, 100];
+        //reduce method are used when you have single op .
+        let total = arr.reduce((x, y) => x + y);
+        console.log(total);
+
+        let sqrt_all = arr.map(Math.sqrt); // math.sqrt().
+        console.log(sqrt_all);
+    </script>
+    <script>
+        let arr1 = [{
+            name: "pooja",
+            age: 20,
+            favcolor: "Black"
+        }, {
+            name: "om",
+            age: 45,
+            favcolor: "Red"
+        }, {
+            name: "pooja",
+            age: 30,
+            favcolor: "Black"
+        }, {
+            name: "Nitss",
+            age: 40,
+            favcolor: "White"
+        }, ];
+
+        let newarr = arr1.filter(function(person) {
+            return person.age <= 40;
+        })
+        console.log(newarr);
+        // sorting asending order.
+        let sorting = arr1.sort(function(x, y) {
+            return parseFloat(x.age) - parseFloat(y.age);
+        });
+        console.log(sorting);
+    </script>
+</body>
+
+</html>

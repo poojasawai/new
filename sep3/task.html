@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form>
+        <input id="myinput" type="text" placeholder="To-DO" value="">
+        <button type="button" onclick="add()">Add</button>
+        <ul id="list1"></ul>
+    </form>
+    <script>
+        function add() {
+
+            var input = document.getElementById("myinput");
+            var list = document.getElementById("list1");
+
+            var Enode = document.createElement("li");
+            console.log(Enode);
+            var Tnode = document.createTextNode(input.value);
+            console.log(Tnode);
+
+            Enode.appendChild(Tnode);
+            list.appendChild(Enode);
+            Enode.value = "";
+
+        }
+    </script>
+</body>
+
+</html>

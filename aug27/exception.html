@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h2>Exception Handling</h2>
+          <script>
+                    try{
+                              add();
+                              document.write("hello world");
+                    }
+                    catch(err){
+                              document.write("Message:"+err.message+"<br>");
+                              document.write("Name:"+err.nane+"<br>");
+                              document.write("Stack:"+err.stack+"<br>");
+
+                    }
+          </script>
+          <hr width="100%">
+          <script>
+                try{
+                              add();
+                              document.write("hello world");// this code not exicuted ()
+                    }
+                    catch(e){
+                              document.write("function not defind"+"<br>"); //self handling
+
+                    }  
+                    // exception create or not but any file we are open this closed any have is important. 
+                    finally{ // any have exicuted code write in finally  
+                          document.write("get executed whether  there is exception or not<br>");    
+                    }  
+          </script>
+</body>
+</html>

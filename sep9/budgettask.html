@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Budget</title>
+    <link rel="stylesheet" href="budget.css">
+</head>
+
+<body>
+    <h2>Budget Management</h2>
+    <div id="mydiv">
+        <fieldset id="f1">
+            <legend>Enter Your Budget</legend>
+            Enter Budget:<input type="text" id="myinput" placeholder=""><br>
+            <button type="button" id="mybtn" onclick="breload()">Reload</button><br>
+        </fieldset>
+    </div>
+    <div id="mydiv1">
+        <!-- <table id="table" border="1">
+            <tr>
+                <th colspan="4" id="mycols">Budget Table:</th>
+            </tr>
+            <tr id="mytr">
+                <th id="th1">Budget Amt.</th>
+                <th id="th2">Expenses Name</th>
+                <th id="th3">Expenses Amt.</th>
+                <th id="th4">Remaining Amt.</th>
+            </tr>
+
+        </table> -->
+        <table id="tbl_bdget" border="1">
+            <tr>
+                <th colspan="4" id="mycols">Budget Table:</th>
+            </tr>
+            <tr>
+                <!-- <tr colspan="4"> -->
+                <th>Budget Amt.</th>
+                <th>Expenses Name:</th>
+                <th>Expenses Amt.</th>
+                <th>Remaining Amt.s</th>
+            </tr>
+        </table>
+    </div>
+    <div id="mydiv2">
+        <fieldset id="f2">
+            <legend>Expenses</legend>
+            <span>Expenses Name:</span><br>
+            <input type="text" id="myinput2" placeholder=""> <br>
+            <span>Expenses Amt:</span><br>
+            <input type="text" id="myinput3" placeholder=""><br><br>
+            <button type="button" onclick="Expens()">Expenses</button>
+        </fieldset>
+        <fieldset id="f3">
+            <legend>Expenses Info:</legend>
+
+        </fieldset>
+    </div>
+
+    <script>
+        // var btn1 = document.getElementById("mybtn");
+        //btn1.addEventListener("click", breload);
+
+        function breload() {
+            var input1 = document.getElementById("myinput").value;
+            document.getElementById("mycols").textContent += input1;
+        }
+        // expenses 
+        function Expens() {
+            var input1 = document.getElementById("myinput").value;
+            var input2 = document.getElementById("myinput2").value;
+            var input3 = document.getElementById("myinput3").value;
+            //var nn = document.getElementById("mytr").cloneNode(true);
+
+            //   document.getElementById("th1").textContent = input1;
+            //   document.getElementById("th2").textContent = input2;
+            //   document.getElementById("th3").textContent = input3;
+            //   document.getElementById("th4").textContent = (input1 - input3);
+            //   document.getElementById("table").appendChild(nn);
+
+            /* nn.firstChild.textContent = input1;
+
+            nn.firstChild.nextSibling.textContent = input2;
+            nn.firstChild.nextSibling.nextSibling.textContent = input3;
+            nn.firstChild.lastChild.textContent = (input3 - input2);*/
+            // expenses info
+
+            var tbl = document.getElementById("tbl_bdget");
+            var t_row = document.createElement("tr");
+            var t_data1 = document.createElement("td");
+            t_data1.textContent = input1;
+            t_row.appendChild(t_data1);
+
+            var t_data2 = document.createElement("td");
+            t_data2.textContent = input2;
+            t_row.appendChild(t_data2);
+
+            var t_data3 = document.createElement("td");
+            t_data3.textContent = input3;
+            t_row.appendChild(t_data3);
+
+            var t_data4 = document.createElement("td");
+            t_data4.textContent = input1 - input3;
+            t_row.appendChild(t_data4);
+
+            tbl.appendChild(t_row);
+
+
+            var remaingAmt = document.getElementById("f3");
+            var ul1 = document.createElement("ul");
+            var list1 = document.createElement("li");
+            list1.textContent = input2 + input3;
+            ul1.appendChild(list1);
+            remaingAmt.appendChild(ul1);
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

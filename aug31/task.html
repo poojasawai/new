@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h1>welcome to javascript</h1>
+          <p  onclick="eclick();"  id="para">javascript is a object  base programming lang.</p>
+
+
+          <script>
+               function eclick(){
+
+                    document.getElementById("para").style.backgroundColor="lightgreen";
+
+               }
+
+          </script>
+          <h4>onkeyup</h4>
+          Enter Name: <input type="text" id="iframe" onkeyup="myfun()">
+          <script>
+              function myfun(){
+                        var x=document.getElementById("iframe");
+                        x.value=x.value.toUpperCase();
+              }
+          </script>
+                    <h4>onkeydown</h4>
+                    <input type="text" id="demo" onkeydown="myfun1()">
+                    <script>
+                      function myfun1(){
+                     document.getElementById("demo").style.backgroundColor="lightblue";
+                    }
+                    </script>
+
+
+          
+</body>
+</html>
